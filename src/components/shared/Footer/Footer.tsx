@@ -1,3 +1,4 @@
+import vectorImg from "@/assets/images/footer-vector.png";
 import navLogo from "@/assets/images/nav-logo.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,10 +15,10 @@ import { PiMapPinAreaFill } from "react-icons/pi";
 
 const Footer = () => {
   return (
-    <footer className="bg-customGradient text-white">
-      <div className="container py-28 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className=" bg-customGradient text-white overflow-hidden">
+      <div className="container py-28 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
         {/* Logo and Address */}
-        <div>
+        <div className="lg:col-span-2">
           <Link
             href="/"
             className="flex items-center"
@@ -152,16 +153,25 @@ const Footer = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className=" text-center border-t border-gray-700 pt-4">
-        <p className="text-sm">
+      <div className="relative text-center border-t border-white/10 py-8 font-satoshi font-medium text-lg">
+        <p className="">
           Copyright © 2025, All Rights Reserved By{" "}
           <a
             href="#"
-            className="text-yellow-primary hover:text-yellow-400 font-medium"
+            className="text-yellow-primary hover:text-yellow-400 underline underline-offset-4"
           >
             Vyazen LLC
           </a>
         </p>
+        {/* Vector Image absolute bottom */}
+        <Image
+          src={vectorImg}
+          alt="Vector"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="bottom"
+          className="absolute bottom-0 left-0 right-0 "
+        />
       </div>
     </footer>
   );
