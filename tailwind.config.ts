@@ -8,24 +8,26 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        customGradient:
+          "linear-gradient(315deg, #000000 0%, #212102 49%, #383800 100%)",
+      },
       colors: {
-        "blue-primary": "#3C55A5",
-        "green-primary": "#1BB68A",
-        "green-light": "#E8F8F3",
-        "gray-light": "#4B5563",
+        "yellow-primary": "#F9FA00",
+        "olive-secondary": "#333300",
       },
       container: {
         screens: {
-          DEFAULT: "1290px",
+          DEFAULT: "1440px",
         },
         center: true,
-        padding: "1.2rem",
-      },
-      screens: {
-        xs: "540px", 
+        padding: {
+          DEFAULT: "5%",
+          sm: "1rem",
+        },
       },
     },
   },
-  
+
   plugins: [],
 } satisfies Config;
