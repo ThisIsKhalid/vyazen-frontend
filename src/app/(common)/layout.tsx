@@ -5,7 +5,7 @@ import React, { ReactNode } from "react";
 
 const layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="container border border-red-500">
+    <div className="">
       <NavBar />
       <div className="h-full min-h-[calc(100vh-0px)]">{children}</div>
       <Footer />
