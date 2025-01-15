@@ -34,11 +34,11 @@ const NavBar = () => {
           </Link>
 
           {/* Desktop Links */}
-          <ul className="hidden md:flex lg:gap-x-10 md:gap-x-3 items-center text-nowrap">
+          <ul className="hidden md:flex font-satoshi font-medium lg:gap-x-10 md:gap-x-3 items-center text-nowrap">
             <li>
               <Link
                 href="/"
-                className="text-base font-medium leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out "
+                className="text-base leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out "
               >
                 Home
               </Link>
@@ -46,7 +46,7 @@ const NavBar = () => {
             <li>
               <a
                 href="#about"
-                className="text-base font-medium leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out "
+                className="text-base leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out "
               >
                 About Us
               </a>
@@ -54,7 +54,7 @@ const NavBar = () => {
             <li className="relative group">
               <a
                 href="#products"
-                className="text-base font-medium leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out  flex items-center"
+                className="text-base leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out  flex items-center"
               >
                 Products <FaPlus className="ml-1 text-xs" />
               </a>
@@ -62,7 +62,7 @@ const NavBar = () => {
             <li className="relative group">
               <a
                 href="#services"
-                className="text-base font-medium leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out  flex items-center"
+                className="text-base leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out  flex items-center"
               >
                 Services <FaPlus className="ml-1 text-xs" />
               </a>
@@ -70,7 +70,7 @@ const NavBar = () => {
             <li>
               <a
                 href="#blog"
-                className="text-base font-medium leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out "
+                className="text-base leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out "
               >
                 Blog
               </a>
@@ -156,11 +156,11 @@ const NavBar = () => {
           </li>
         </ul>
 
-       <div className="px-6 absolute bottom-5 w-full">
-            <button className="w-full py-2 px-8 border border-yellow-primary rounded-full text-yellow-primary hover:bg-yellow-primary hover:text-black opacity-100 transition duration-300 text-nowrap">
-              Get Started Here
-            </button>
-       </div>
+        <div className="px-6 absolute bottom-5 w-full">
+          <button className="w-full py-2 px-8 border border-yellow-primary rounded-full text-yellow-primary hover:bg-yellow-primary hover:text-black opacity-100 transition duration-300 text-nowrap">
+            Get Started Here
+          </button>
+        </div>
       </div>
     </>
   );

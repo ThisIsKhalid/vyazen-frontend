@@ -20,3 +20,27 @@
 .slim-scroll::-webkit-scrollbar-thumb:hover {
   background: #555; /* Thumb color on hover */
 }
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/satoshi/Satoshi-Regular.woff2") format("woff2"),
+    url("/satoshi/Satoshi-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/satoshi/Satoshi-Medium.woff2") format("woff2"),
+    url("/satoshi/Satoshi-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/satoshi/Satoshi-Bold.woff2") format("woff2"),
+    url("/satoshi/Satoshi-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}

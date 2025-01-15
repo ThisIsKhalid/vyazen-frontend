@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        satoshi: ["Satoshi", "sans-serif"],
+      },
       backgroundImage: {
         customGradient:
           "linear-gradient(315deg, #000000 0%, #212102 49%, #383800 100%)",
