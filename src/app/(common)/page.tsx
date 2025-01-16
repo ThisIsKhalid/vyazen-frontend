@@ -1,14 +1,12 @@
-import LoginWithGoogle from '@/components/LoginWithGoogle';
-import Banner from '@/components/pages/home/Banner/Banner';
-import React from 'react';
+import CallToAction from "@/components/shared/CallToAction/CallToAction";
+import React from "react";
 
-const page = () => {
-    return (
-        <div>
-        <Banner/>
-            <LoginWithGoogle/> 
-        </div>
-    );
+const HomePage = () => {
+  return (
+    <div>
+      <CallToAction />
+    </div>
+  );
 };
 
-export default page;
+export default HomePage;
