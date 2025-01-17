@@ -3,6 +3,7 @@ import React from "react";
 interface SectionHeaderProps {
   subtitle: string;
   title: React.ReactNode;
+  titleClass?: string;
   button?: React.ReactNode;
   alignment?: "left" | "center"; // Optional alignment prop
   extraClasses?: string; // Optional for custom styling
@@ -16,7 +17,7 @@ const SectionHeader = ({ subtitle, title, button }: SectionHeaderProps) => {
       {/* Subtitle */}
 
       <div className="mt-1">
-        <span className="py-1.5 px-8 rounded-full bg-[#F8F8F8] font-satoshi font-bold text-base tracking-[8px] uppercase shadow-[1px_3px_1px_0px_rgba(255,255,255,0.2)]">
+        <span className="py-1.5 px-8 rounded-full bg-[#F8F8F8] font-satoshi font-bold text-base tracking-[8px] uppercase shadow-[1px_3px_1px_0px_rgba(255,255,255,0.2)] text-nowrap">
           {subtitle}
         </span>
       </div>
