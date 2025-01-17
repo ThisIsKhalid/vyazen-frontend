@@ -6,7 +6,7 @@ import React from "react";
 
 const CallToAction = () => {
   return (
-    <section className="container md:my-32 my-16">
+    <section className="container md:my-[140px] sm:my-[70px] my-[50px]">
       <div className="bg-customGradient relative text-white rounded-[32px] flex flex-col items-center justify-center p-8 md:p-24 ">
         {/* Background Icons */}
         <div className="absolute  md:top-1/2 top-14 lg:left-32 md:left-10 left-3 -translate-y-1/2">
