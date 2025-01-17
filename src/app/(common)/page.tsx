@@ -1,13 +1,21 @@
+import OurProcess from "@/components/pages/home/OurProcess";
 import OurProducts from "@/components/pages/home/OurProducts";
+import OurServices from "@/components/pages/home/OurServices";
+import Testimonials from "@/components/pages/home/Testimonials";
 import AboutUs from "@/components/shared/AboutUs/AboutUs";
 import CallToAction from "@/components/shared/CallToAction/CallToAction";
+import FAQ from "@/components/shared/FAQ/FAQ";
 import React from "react";
 
 const HomePage = () => {
   return (
     <div>
       <AboutUs />
+      <OurServices />
       <OurProducts />
+      <OurProcess />
+      <Testimonials />
+      <FAQ />
       <CallToAction />
     </div>
   );

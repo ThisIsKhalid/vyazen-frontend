@@ -5,9 +5,9 @@ const AboutUs = () => {
   return (
     <section className="container  md:mt-[140px] sm:mt-[70px] mt-[50px]">
       {/* Header Section */}
-
       <SectionHeader
         subtitle="ABOUT US"
+        subtitleClass="white"
         title={
           <>
             We specialize in <span className="font-bold">delivering</span>{" "}
@@ -16,6 +16,7 @@ const AboutUs = () => {
             <span className="font-bold">achieve their</span> full potential.
           </>
         }
+        titleClass="md:text-[44px] md:leading-[54px]"
         button={
           <button className="bg-yellow-primary text-black px-8 py-3 rounded-full hover:bg-yellow-400 transition font-bold text-base font-satoshi">
             Contact With Us
