@@ -1,3 +1,5 @@
+import vectorPageHeader from "@/assets/images/page-vector.png";
+import Image from "next/image";
 import React from "react";
 
 type PageHeaderProps = {
@@ -7,9 +9,24 @@ type PageHeaderProps = {
 
 const PageHeader = ({ title, subtitle }: PageHeaderProps) => {
   return (
-    <div className="text-center py-10">
-      <h2 className="text-3xl font-bold text-white">{title}</h2>
-      <p className="text-gray-400 mt-2">{subtitle}</p>
+    <div className="bg-customGradient h-[292px]">
+      <div className="container h-full flex flex-col items-center justify-center relative">
+        <h2 className="font-bold md:text-[44px] leading-[49px] tracking-[-0.02em] text-white uppercase">
+          {title}
+        </h2>
+        <p className="font-satoshi text-base text-white mt-4">
+          Home / <span className="text-yellow-primary">{subtitle}</span>
+        </p>
+
+        <Image
+          src={vectorPageHeader}
+          alt="Vector Page Header"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          className="absolute top-0 left-0"
+        />
+      </div>
     </div>
   );
 };

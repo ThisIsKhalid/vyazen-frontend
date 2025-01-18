@@ -1,9 +1,10 @@
-import React from 'react'
+import PageHeader from "@/components/shared/PageHeader/PageHeader";
+import React from "react";
 
 export default function AboutUsPage() {
   return (
     <div>
-      about us page
+      <PageHeader title="About Us" subtitle="About Us" />
     </div>
-  )
+  );
 }

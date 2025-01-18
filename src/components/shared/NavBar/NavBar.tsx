@@ -17,7 +17,7 @@ const NavBar = () => {
   return (
     <>
       {/* Navbar */}
-      <nav className="bg-customGradient text-white">
+      <nav className="bg-customGradient text-white border-b border-white/10">
         <section className="container py-6 flex justify-between items-center">
           <Link
             href="/"
