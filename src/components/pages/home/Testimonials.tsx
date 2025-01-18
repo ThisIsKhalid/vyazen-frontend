@@ -1,5 +1,13 @@
+"use client";
+
 import SectionHeader from "@/components/shared/SectionHeader/SectionHeader";
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import TestimonialCard from "./TestimonialCard";
 
 const Testimonials = () => {
   return (
@@ -16,6 +24,24 @@ const Testimonials = () => {
         }
         titleClass="md:text-[64px] md:leading-[74px]"
       />
+
+      <TestimonialCard />
+
+      {/* Testimonials */}
+      <div className="mt-20">
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={30}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[]}
+        >
+          <SwiperSlide>
+            <TestimonialCard />
+          </SwiperSlide>
+        </Swiper>
+      </div>
     </section>
   );
 };
