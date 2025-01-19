@@ -1,5 +1,6 @@
 import SectionHeader from "@/components/shared/SectionHeader/SectionHeader";
 import React from "react";
+import InfoCard from "./InfoCard";
 
 const OurProcess = () => {
   return (
@@ -20,7 +21,17 @@ const OurProcess = () => {
             </>
           }
           titleClass="md:text-[44px] md:leading-[54px] text-white"
+          button={
+            <button className="bg-yellow-primary text-black px-8 py-3 rounded-full hover:bg-yellow-400 transition font-bold text-base font-satoshi">
+              Contact With Us
+            </button>
+          }
         />
+
+        <div className="mt-24">
+          {/* info card */}
+          <InfoCard />
+        </div>
       </div>
     </section>
   );
