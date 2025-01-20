@@ -20,16 +20,21 @@ const SectionHeader = ({
 }: SectionHeaderProps) => {
   return (
     <div
-      className={cn("grid", {
-        "md:grid-cols-3 grid-cols-1 gap-x-2 gap-y-2 md:gap-y-0":
+      className={cn("flex", {
+        "md:flex-row flex-col items-center justify-center md:items-start md:justify-start gap-x-0 md:gap-x-3 gap-y-8 md:gap-y-0":
           align === "left",
-        "grid-cols-1 items-center justify-center text-center gap-y-10":
-          align === "center",
+        "flex-col gap-y-8": align === "center",
       })}
     >
       {/* Subtitle */}
 
-      <div className="mt-1">
+      <div
+        className={cn("", {
+          "md:flex-none md:w-[35%] w-full text-center md:text-left":
+            align === "left",
+          "text-center": align === "center",
+        })}
+      >
         <span
           className={cn(
             "py-1.5 px-8 rounded-full font-satoshi font-bold text-base tracking-[8px] uppercase shadow-[1px_3px_1px_0px_rgba(255,255,255,0.2)] text-nowrap",
@@ -46,23 +51,23 @@ const SectionHeader = ({
       {/* Title */}
       <div
         className={cn({
-          "md:col-span-2": align === "left",
-          "col-span-1": align === "center",
+          "md:flex-1": align === "left",
+          "": align === "center",
         })}
       >
         <h2
-          className={cn(
-            "font-light text-4xl leading-[46px] tracking-[-0.02em]",
-            titleClass,
-            {
-              "text-left": align === "left",
-              "text-center": align === "center",
-            }
-          )}
+          className={cn("font-light text-2xl tracking-[-0.02em]", titleClass, {
+            "md:text-left text-center": align === "left",
+            "text-center": align === "center",
+          })}
         >
           {title}
         </h2>
-        {button && <div className="mt-5 md:mt-10">{button}</div>}
+        {button && (
+          <div className="mt-5 md:mt-10 flex items-center justify-center md:justify-start md:items-start">
+            {button}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ const OurProcess = () => {
           title={
             <>
               Our <span className="font-bold">process is</span> designed to{" "}
-              <br />
+              <br className="hidden md:block" />
               ensure seamless{" "}
               <span className="font-bold">
                 collaboration and <br /> exceptional
