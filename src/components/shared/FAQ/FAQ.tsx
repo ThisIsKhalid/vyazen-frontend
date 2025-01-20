@@ -87,7 +87,7 @@ const FAQ = () => {
             questions!
           </>
         }
-        titleClass="md:text-[64px] md:leading-[74px]"
+        titleClass="lg:text-[64px] lg:leading-[74px] md:text-[48px] md:leading-[58px]"
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-20">

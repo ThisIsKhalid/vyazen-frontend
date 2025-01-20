@@ -9,12 +9,12 @@ type PageHeaderProps = {
 
 const PageHeader = ({ title, subtitle }: PageHeaderProps) => {
   return (
-    <div className="bg-customGradient h-[292px]">
+    <div className="bg-customGradient h-[200px] md:h-[292px]">
       <div className="container h-full flex flex-col items-center justify-center relative">
-        <h2 className="font-bold md:text-[44px] leading-[49px] tracking-[-0.02em] text-white uppercase">
+        <h2 className="font-bold md:text-[44px] md:leading-[49px] tracking-[-0.02em] text-white uppercase">
           {title}
         </h2>
-        <p className="font-satoshi text-base text-white mt-4">
+        <p className="font-satoshi text-base text-white md:mt-4 mt-2">
           Home / <span className="text-yellow-primary">{subtitle}</span>
         </p>
 
