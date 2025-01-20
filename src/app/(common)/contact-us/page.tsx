@@ -26,7 +26,6 @@ export default function ContactUsPage() {
   <div className="container  md:mt-[140px] sm:mt-[70px] mt-[50px]">
   <ContactUsForm />
   </div>
-  
   <FAQ />
   <CallToAction />
 </div>;
