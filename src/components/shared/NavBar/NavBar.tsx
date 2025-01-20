@@ -44,12 +44,12 @@ const NavBar = () => {
               </Link>
             </li>
             <li>
-              <a
-                href="#about"
+              <Link
+                href="/about-us"
                 className="text-base leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out "
               >
                 About Us
-              </a>
+              </Link>
             </li>
             <li className="relative group">
               <a

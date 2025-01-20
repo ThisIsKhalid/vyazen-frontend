@@ -7,6 +7,7 @@ interface SectionHeaderProps {
   title: React.ReactNode;
   titleClass?: string;
   button?: React.ReactNode;
+  align?: "left" | "center";
 }
 
 const SectionHeader = ({
@@ -15,10 +16,16 @@ const SectionHeader = ({
   button,
   titleClass,
   subtitleClass,
+  align = "left",
 }: SectionHeaderProps) => {
   return (
     <div
-      className={`grid md:grid-cols-3 grid-cols-1 gap-x-2 gap-y-2 md:gap-y-0`}
+      className={cn("grid", {
+        "md:grid-cols-3 grid-cols-1 gap-x-2 gap-y-2 md:gap-y-0":
+          align === "left",
+        "grid-cols-1 items-center justify-center text-center gap-y-10":
+          align === "center",
+      })}
     >
       {/* Subtitle */}
 
@@ -37,11 +44,20 @@ const SectionHeader = ({
       </div>
 
       {/* Title */}
-      <div className="md:col-span-2">
+      <div
+        className={cn({
+          "md:col-span-2": align === "left",
+          "col-span-1": align === "center",
+        })}
+      >
         <h2
           className={cn(
-            "font-light text-4xl leading-[46px] tracking-[-0.02em] text-left",
-            titleClass
+            "font-light text-4xl leading-[46px] tracking-[-0.02em]",
+            titleClass,
+            {
+              "text-left": align === "left",
+              "text-center": align === "center",
+            }
           )}
         >
           {title}
