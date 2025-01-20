@@ -13,7 +13,7 @@ const OurProducts = () => {
             Tangible <span className="font-bold">Outcomes</span>
           </>
         }
-        titleClass="md:text-[64px] md:leading-[74px]"
+        titleClass="lg:text-[64px] lg:leading-[74px] md:text-[48px] md:leading-[58px]"
       />
     </section>
   );
