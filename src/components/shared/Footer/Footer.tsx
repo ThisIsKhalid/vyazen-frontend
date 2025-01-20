@@ -15,7 +15,7 @@ import { PiMapPinAreaFill } from "react-icons/pi";
 
 const Footer = () => {
   return (
-    <footer className=" bg-customGradient text-white overflow-hidden">
+    <footer className=" bg-customGradient text-white overflow-hidden md:mt-[140px] sm:mt-[70px] mt-[50px]">
       <div className="container py-28 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
         {/* Logo and Address */}
         <div className="lg:col-span-2">

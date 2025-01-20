@@ -1,3 +1,6 @@
+import AboutUs from "@/components/shared/AboutUs/AboutUs";
+import CallToAction from "@/components/shared/CallToAction/CallToAction";
+import FAQ from "@/components/shared/FAQ/FAQ";
 import PageHeader from "@/components/shared/PageHeader/PageHeader";
 import SectionHeader from "@/components/shared/SectionHeader/SectionHeader";
 import React from "react";
@@ -20,6 +23,9 @@ export default function AboutUsPage() {
           align="center"
         />
       </div>
+      <AboutUs />
+      <FAQ />
+      <CallToAction />
     </div>
   );
 }

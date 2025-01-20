@@ -3,7 +3,7 @@ import SectionHeader from "../SectionHeader/SectionHeader";
 
 const AboutUs = () => {
   return (
-    <section className="container  md:mt-[140px] sm:mt-[70px] mt-[50px]">
+    <section className="container md:mt-[140px] sm:mt-[70px] mt-[50px]">
       {/* Header Section */}
       <SectionHeader
         subtitle="ABOUT US"
