@@ -1,5 +1,5 @@
 import CallToAction from "@/components/shared/CallToAction/CallToAction";
-import ContactUsForm from "@/components/shared/ContactUsForm/ContactUsForm";
+import ContactUsForm from "@/components/pages/ContactUsForm/ContactUsForm";
 import FAQ from "@/components/shared/FAQ/FAQ";
 import PageHeader from "@/components/shared/PageHeader/PageHeader";
 import SectionHeader from "@/components/shared/SectionHeader/SectionHeader";
@@ -23,7 +23,7 @@ export default function ContactUsPage() {
       align="center"
     />
   </div>
-  <div className="container  md:mt-[140px] sm:mt-[70px] mt-[50px]">
+  <div className="container  md:mt-[80px] sm:mt-[70px] mt-[50px]">
   <ContactUsForm />
   </div>
   <FAQ />
