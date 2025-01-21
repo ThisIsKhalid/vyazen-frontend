@@ -18,6 +18,7 @@ export default {
       colors: {
         "yellow-primary": "#F9FA00",
         "olive-secondary": "#333300",
+        "black-secondary":"#00000080",
       },
       container: {
         screens: {

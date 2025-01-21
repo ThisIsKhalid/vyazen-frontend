@@ -26,7 +26,7 @@ export default function NotFound() {
             {" "}
             Page Not Found
           </h2>
-          <p className="text-[#00000080] text-sm sm:text-base">
+          <p className="text-black-secondary text-sm sm:text-base">
             Oops! The page you&apos;re looking for doesn&apos;t seem to exist
           </p>
           <button className="bg-yellow-primary text-black font-bold px-6 sm:px-8 py-3 rounded-full">
