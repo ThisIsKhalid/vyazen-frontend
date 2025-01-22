@@ -75,7 +75,7 @@ export default function TermsPage() {
 
         <div className="space-y-4">
           <h2 className="md:text-[36px] lg:text[40px] text-xl font-bold md:text-nowrap">
-            Customer's obligations to end users.
+            Customer&apos;s obligations to end users.
           </h2>
           <p className="text-black-secondary font-satoshi font-medium leading-relaxed">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
