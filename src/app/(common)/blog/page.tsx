@@ -6,7 +6,7 @@ import SectionHeader from "@/components/shared/SectionHeader/SectionHeader";
 
 export default function blog() {
     return <div>
-    <PageHeader title="Contact Us" subtitle="Contact Us" />
+    <PageHeader title="Blogs" subtitle="Blogs" />
     <div className="container  md:mt-[140px] sm:mt-[70px] mt-[50px]">
       <SectionHeader
         subtitle="GET IN TOUCH"

@@ -61,7 +61,7 @@ const NavBar = () => {
             </li>
             <li className="relative group">
               <a
-                href="#services"
+                href="#our-services"
                 className="text-base leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out  flex items-center"
               >
                 Services <FaPlus className="ml-1 text-xs" />
