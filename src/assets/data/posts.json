@@ -1,0 +1,43 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "title": "How To Create An Effective Visual Strategy.",
+        "excerpt": "Self-care is the cornerstone of the well-being, encompassing practices that the nurture our mental, physical.",
+        "authorName": "Michael Turner",
+        "authorAvatar": "/placeholder.svg",
+        "date": "Nov 27, 2024",
+        "featured": true,
+        "image": "https://i.postimg.cc/GhGGpgQW/professional-disscussion-image.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Importance Of Consistency In Multi-Platform Design.",
+        "excerpt": "Maintaining consistent design elements across platforms ensures a cohesive brand experience.",
+        "authorName": "Michael Turner",
+        "authorAvatar": "/placeholder.svg",
+        "date": "Nov 27, 2024",
+        "featured": false
+      },
+      {
+        "id": 3,
+        "title": "Importance Of Consistency In Multi-Platform Design",
+        "excerpt": "Maintaining consistent design elements across platforms ensures a cohesive brand experience.",
+        "authorName": "Michael Turner",
+        "authorAvatar": "/placeholder.svg",
+        "date": "Nov 27, 2024",
+        "featured": false
+      },
+      {
+        "id": 4,
+        "title": "Importance Of Consistency In Multi-Platform Design",
+        "excerpt": "Maintaining consistent design elements across platforms ensures a cohesive brand experience.",
+        "authorName": "Michael Turner",
+        "authorAvatar": "/placeholder.svg",
+        "date": "Nov 27, 2024",
+        "featured": false
+      }
+    ]
+  }
+  
+  
