@@ -1,5 +1,30 @@
+import ServicePage from '@/components/pages/Services/page';
+import CallToAction from '@/components/shared/CallToAction/CallToAction';
+import FAQ from '@/components/shared/FAQ/FAQ';
+import PageHeader from '@/components/shared/PageHeader/PageHeader';
+import SectionHeader from '@/components/shared/SectionHeader/SectionHeader';
 import React from 'react'
 
+
 export default function OurServicesPage() {
-  return <div>OurServicesPage</div>;
+  return <div> <PageHeader title="Blogs" subtitle="Blogs" />
+  <div className="container md:mt-[140px] sm:mt-[70px] mt-[50px]">
+    <SectionHeader
+      subtitle="GET IN TOUCH"
+      subtitleClass="white"
+      title={
+        <>
+          <span className="font-bold">Need </span> Assistance
+           <br />
+          Want to <span className="font-bold"> Collaborate!</span>
+        </>
+      }
+      titleClass="md:text-[64px] md:leading-[74px]"
+      align="center"
+    />
+  </div>
+      <ServicePage/>
+  <FAQ />
+  <CallToAction />
+</div>;
 }
