@@ -32,28 +32,28 @@ export default function CareerPage() {
           location="Montreal, Canada"
           arrangement="Onsite"
           salaryRange="$50,000 - $80,000/year"
-          onApply={() => alert("Apply button clicked!")}
+          link="/career/career-a"
         />
         <CareerCard
           title="Product Designer"
           location="Montreal, Canada"
           arrangement="Onsite"
           salaryRange="$50,000 - $80,000/year"
-          onApply={() => alert("Apply button clicked!")}
+          link="/career/career-a"
         />
         <CareerCard
           title="Product Designer"
           location="Montreal, Canada"
           arrangement="Onsite"
           salaryRange="$50,000 - $80,000/year"
-          onApply={() => alert("Apply button clicked!")}
+          link="/career/career-a"
         />
         <CareerCard
           title="Product Designer"
           location="Montreal, Canada"
           arrangement="Onsite"
           salaryRange="$50,000 - $80,000/year"
-          onApply={() => alert("Apply button clicked!")}
+          link="/career/career-a"
         />
       </div>
       <FAQ />
