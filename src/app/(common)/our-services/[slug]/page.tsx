@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import CallToAction from "@/components/shared/CallToAction/CallToAction";
 import image from "@/assets/images/details img.png";
 import ServiceSidebar from "@/components/pages/Services/ServiceSidebar";

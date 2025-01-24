@@ -21,7 +21,7 @@ export default function ServiceSidebar() {
   ];
 
   return (
-    <div className="w-[317px] h-[520px] ">
+    <div className="w-[317px] lg:h-[520px] ">
       <div className="">
         {services.map((service, index) => (
           <div key={service.slug}>

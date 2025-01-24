@@ -23,7 +23,11 @@ export default function OurServicesPage() {
       align="center"
     />
   </div>
-      <ServicePage/>
+      
+     <div className=" md:mt-[140px] sm:mt-[70px] mt-[50px]">
+     <ServicePage/>
+     </div>
+      
   <FAQ />
   <CallToAction />
 </div>;
