@@ -239,8 +239,8 @@ export default function TermsPage() {
             Malesuada tortor at mattis semper aenean. Tristique nisi
             pellentesque fringilla ipsum sed amet dui amet mattis. Eleifend orci
             sed pulvinar blandit aliquam nisl sed libero amet. Etiam lectus sed
-            enim eu commodo nisi. Tellus vehicula arcu  egestas porttitor
-            quis faucibus. Sit lacus id pretium malesuada velit.
+            enim eu commodo nisi. Tellus vehicula arcu egestas porttitor quis
+            faucibus. Sit lacus id pretium malesuada velit.
           </p>
           <p className="text-black-secondary font-satoshi font-medium leading-relaxed">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
