@@ -2,169 +2,180 @@ import Image from "next/image";
 import Link from "next/link";
 import { Shield, Award, Users, Clock } from "lucide-react";
 import CallToAction from "@/components/shared/CallToAction/CallToAction";
+import image from "@/assets/images/details img.png";
+import ServiceSidebar from "@/components/pages/Services/ServiceSidebar";
+
+import { LiaAwardSolid } from "react-icons/lia";
 
 export default function ServiceDetails() {
   return (
     <div className="container mx-auto">
       <div className="md:mt-[140px] sm:mt-[70px] mt-[50px] grid grid-cols-1 md:grid-cols-[auto_1fr]  gap-6">
         {/* Sidebar Navigation */}
-        <div className="w-full md:w-64 h-[520px] bg-white ml-[72px] p-6 border-r rounded-lg shadow-md">
-          <h3 className="font-bold text-lg mb-4">Service Categories</h3>
-          <div className="space-y-2">
-            <Link
-              href="/our-services/ux-ui-design"
-              className="flex items-center justify-between px-4 py-2 rounded-lg bg-yellow-400 text-black font-medium hover:shadow-md"
-            >
-              <span>UX/UI Design</span>
-              <span className="text-black">→</span>
-            </Link>
-            <Link
-              href="/our-services/web-development"
-              className="flex items-center justify-between px-4 py-2 rounded-lg hover:bg-gray-100 text-gray-600 hover:shadow-md"
-            >
-              <span>Web Development</span>
-              <span>→</span>
-            </Link>
-            <Link
-              href="/our-services/branding"
-              className="flex items-center justify-between px-4 py-2 rounded-lg hover:bg-gray-100 text-gray-600 hover:shadow-md"
-            >
-              <span>Branding & Identity</span>
-              <span>→</span>
-            </Link>
-            <Link
-              href="/our-services/app-development"
-              className="flex items-center justify-between px-4 py-2 rounded-lg hover:bg-gray-100 text-gray-600 hover:shadow-md"
-            >
-              <span>App Development</span>
-              <span>→</span>
-            </Link>
-            <Link
-              href="/our-services/digital-marketing"
-              className="flex items-center justify-between px-4 py-2 rounded-lg hover:bg-gray-100 text-gray-600 hover:shadow-md"
-            >
-              <span>Digital Marketing</span>
-              <span>→</span>
-            </Link>
-            <Link
-              href="/our-services/motion-graphics"
-              className="flex items-center justify-between px-4 py-2 rounded-lg hover:bg-gray-100 text-gray-600 hover:shadow-md"
-            >
-              <span>Motion Graphics</span>
-              <span>→</span>
-            </Link>
-            <Link
-              href="/our-services/product-design"
-              className="flex items-center justify-between px-4 py-2 rounded-lg hover:bg-gray-100 text-gray-600 hover:shadow-md"
-            >
-              <span>Product Design</span>
-              <span>→</span>
-            </Link>
-            <Link
-              href="/our-services/graphics-design"
-              className="flex items-center justify-between px-4 py-2 rounded-lg hover:bg-gray-100 text-gray-600 hover:shadow-md"
-            >
-              <span>Graphics Design</span>
-              <span>→</span>
-            </Link>
-          </div>
+        <div className="w-full md:w-[357px]  md:h-[520px]   bg-[#F8F8F8] md:ml-[72px] p-6 border-r rounded-[20px] shadow-md">
+          <ServiceSidebar />
         </div>
 
         {/* Main Content */}
         <main>
-          <div className="max-w-6xl py-12 px-6">
-            {/* Hero Section */}
-            <div className="relative h-[300px] sm:h-[400px] rounded-xl overflow-hidden mb-12">
-              <Image
-                src="/path-to-your-image.png"
-                alt="UX/UI Design Service"
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-4 sm:p-8 text-white">
-                <h1 className="text-2xl sm:text-4xl font-bold mb-2 sm:mb-4">UX/UI Design Service</h1>
-                <p className="max-w-xl text-sm sm:text-lg">
-                  We believe exceptional design is at the heart of every successful digital experience. Our UI/UX design
-                  services focus on creating not only visually stunning but also intuitive and functional solutions.
-                </p>
+          <div className="max-w-6xl  px-6">
+            {/*Hero section*/}
+            <div className="">
+              {/* Text Section */}
+              <div className=" mb-6 ">
+                <h1 className="text-2xl  font-bold w-[665px] text-black  ">
+                  We believe exceptional design is at the heart of every
+                  successful digital experience. Our UI/UX design services focus
+                  on creating user-centered interfaces that are not only
+                  visually stunning but also intuitive and functional.
+                </h1>
+              </div>
+
+              {/* Image Section */}
+              <div className="relative   rounded-lg mt-10 mb-20 overflow-hidden ">
+                <Image
+                  src={image} // Replace with the actual image path
+                  alt="Craftwork"
+                  className="w-full md:w-[879px]  h-auto"
+                />
               </div>
             </div>
-
             {/* Service Features */}
-            <section className="mb-16">
-              <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-8">Service Features:</h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-                <div className="bg-white p-4 sm:p-6 rounded-xl shadow-sm">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow-400 rounded-full flex items-center justify-center mb-2 sm:mb-4">
-                    <Award className="w-5 h-5 sm:w-6 sm:h-6" />
+            <section className="mb-16 w-[878px]">
+              <h2 className="text-3xl font-bold mb-6 text-gray-900">
+                Service Features:
+              </h2>
+              <p className="text-gray-600 mb-8 text-sm lg:text-base leading-relaxed">
+                At Vyazen, we believe exceptional design is at the heart of
+                every successful digital experience. Our UI/UX design services
+                focus on creating user-centered interfaces that are not only
+                visually stunning but also intuitive and functional. By
+                combining creativity with strategy, we craft seamless
+                experiences that engage users and drive results.
+              </p>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
+                {/* Quality & Reliable */}
+                <div className="bg-[#F8F8F8] w-[427px] h-[275px] px-10 py-8 rounded-lg shadow-md ">
+                  <div className="bg-yellow-primary w-20 h-20 rounded-full flex items-center justify-center mr-4">
+                    <LiaAwardSolid className=" w-10 h-10 text-xl" />
                   </div>
-                  <h3 className="font-semibold mb-1 sm:mb-2">Quality & Reliable</h3>
-                  <p className="text-xs sm:text-sm text-gray-600">
-                    Our services are optimized to meet the unique needs of your business.
-                  </p>
-                </div>
 
-                <div className="bg-white p-4 sm:p-6 rounded-xl shadow-sm">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow-400 rounded-full flex items-center justify-center mb-2 sm:mb-4">
-                    <Shield className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <div>
+                    <h3 className="font-bold text-2xl mb-6 mt-8 ">
+                      Skilled Staff
+                    </h3>
+                    <p className="font-poppins text-[#545454]">
+                      Our services are tailored to meet the unique needs of your
+                      business.
+                    </p>
                   </div>
-                  <h3 className="font-semibold mb-1 sm:mb-2">Licensed & Insured</h3>
-                  <p className="text-xs sm:text-sm text-gray-600">
-                    Our services are protected to meet the unique needs of your business.
-                  </p>
                 </div>
-
-                <div className="bg-white p-4 sm:p-6 rounded-xl shadow-sm">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow-400 rounded-full flex items-center justify-center mb-2 sm:mb-4">
-                    <Users className="w-5 h-5 sm:w-6 sm:h-6" />
+                {/* Licensed & Insured */}
+                <div className="bg-[#F8F8F8] px-10 py-8 w-[427px] h-[275px] rounded-lg shadow-md ">
+                  <div className="bg-yellow-primary w-20 h-20 rounded-full flex items-center justify-center mr-4">
+                    <LiaAwardSolid className=" w-10 h-10 text-xl" />
                   </div>
-                  <h3 className="font-semibold mb-1 sm:mb-2">Skilled Staff</h3>
-                  <p className="text-xs sm:text-sm text-gray-600">
-                    Our experts are trained to meet the unique needs of your business.
-                  </p>
+
+                  <div>
+                    <h3 className="font-bold text-2xl mb-6 mt-8 ">
+                      Skilled Staff
+                    </h3>
+                    <p className="font-poppins text-[#545454]">
+                      Our services are tailored to meet the unique needs of your
+                      business.
+                    </p>
+                  </div>
                 </div>
-
-                <div className="bg-white p-4 sm:p-6 rounded-xl shadow-sm">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow-400 rounded-full flex items-center justify-center mb-2 sm:mb-4">
-                    <Clock className="w-5 h-5 sm:w-6 sm:h-6" />
+                {/* Skilled Staff */}
+                <div className="bg-[#F8F8F8] px-10 py-8 rounded-lg w-[427px] h-[275px] shadow-md ">
+                  <div className="bg-yellow-primary w-20 h-20 rounded-full flex items-center justify-center mr-4">
+                    <LiaAwardSolid className=" w-10 h-10 text-xl" />
                   </div>
-                  <h3 className="font-semibold mb-1 sm:mb-2">Warranty & Maintained</h3>
-                  <p className="text-xs sm:text-sm text-gray-600">
-                    Our services are maintained to meet the unique needs of your business.
-                  </p>
+
+                  <div>
+                    <h3 className="font-bold text-2xl mb-6 mt-8 ">
+                      Skilled Staff
+                    </h3>
+                    <p className="font-poppins text-[#545454]">
+                      Our services are tailored to meet the unique needs of your
+                      business.
+                    </p>
+                  </div>
+                </div>
+                {/* Warranty & Maintained */}
+                <div className="bg-[#F8F8F8] px-10 py-8 rounded-lg w-[427px] h-[275px] shadow-md ">
+                  <div className="bg-yellow-primary w-20 h-20 rounded-full flex items-center justify-center mr-4">
+                    <LiaAwardSolid className=" w-10 h-10 text-xl" />
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-2xl mb-6 mt-8 ">
+                      Skilled Staff
+                    </h3>
+                    <p className="font-poppins text-[#545454]">
+                      Our services are tailored to meet the unique needs of your
+                      business.
+                    </p>
+                  </div>
                 </div>
               </div>
             </section>
 
             {/* Why Choose Us */}
             <section>
-              <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-8">Why You Should Choose Our UX/UI Service:</h2>
-              <div className="space-y-4 sm:space-y-6">
-                <div className="bg-white p-4 sm:p-8 rounded-xl shadow-sm">
-                  <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">Creative Campaign Excellence</h3>
-                  <p className="text-xs sm:text-sm text-gray-600">
-                    We believe exceptional design is at the heart of every successful digital experience. Our
-                    UI/UX design services create interfaces that not only look stunning but also provide intuitive
-                    navigation and seamless user experiences.
-                  </p>
-                </div>
+              <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-8">
+                Why You Should Choose Our UX/UI Service:
+              </h2>
+              <div className="space-y-6">
+               
+ <div className="space-y-6">
+                  {/* Creative Campaign Excellence */}
+                  <div className="flex items-center bg-gray-100 p-6 sm:p-8 rounded-lg shadow-md">
+                    <div className="w-1/2 pr-6">
+                      <h3 className="text-lg sm:text-xl font-semibold">
+                        Creative Campaign Excellence
+                      </h3>
+                    </div>
+                    <div className="w-1/2">
+                      <p className="text-sm sm:text-base text-gray-600">
+                        At Vyazen, we believe exceptional design is at the heart
+                        of every successful digital experience. Our UI/UX design
+                        services focus on user-centered interfaces.
+                      </p>
+                    </div>
+                  </div>
 
-                <div className="bg-white p-4 sm:p-8 rounded-xl shadow-sm">
-                  <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">Digital Advertising Excellence</h3>
-                  <p className="text-xs sm:text-sm text-gray-600">
-                    Our team specializes in creating digital experiences that captivate and convert. Through strategic
-                    design thinking, we craft interfaces that resonate with your target audience.
-                  </p>
-                </div>
+                  {/* Digital Advertising Excellence */}
+                  <div className="flex items-center bg-gray-100 p-6 sm:p-8 rounded-lg shadow-md">
+                    <div className="w-1/2 pr-6">
+                      <h3 className="text-lg sm:text-xl font-semibold">
+                        Digital Advertising Excellence
+                      </h3>
+                    </div>
+                    <div className="w-1/2">
+                      <p className="text-sm sm:text-base text-gray-600">
+                        At Vyazen, we believe exceptional design is at the heart
+                        of every successful digital experience. Our UI/UX design
+                        services focus on user-centered interfaces.
+                      </p>
+                    </div>
+                  </div>
 
-                <div className="bg-white p-4 sm:p-8 rounded-xl shadow-sm">
-                  <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">Influencer Outreach Services</h3>
-                  <p className="text-xs sm:text-sm text-gray-600">
-                    Our UX/UI designs are crafted to maximize impact across platforms, ensuring your digital
-                    presence stands out in a crowded market.
-                  </p>
+                  {/* Influencer Outreach Services */}
+                  <div className="flex items-center bg-gray-100 p-6 sm:p-8 rounded-lg shadow-md">
+                    <div className="w-1/2 pr-6">
+                      <h3 className="text-lg sm:text-xl font-semibold">
+                        Influencer Outreach Services
+                      </h3>
+                    </div>
+                    <div className="w-1/2">
+                      <p className="text-sm sm:text-base text-gray-600">
+                        At Vyazen, we believe exceptional design is at the heart
+                        of every successful digital experience. Our UI/UX design
+                        services focus on user-centered interfaces.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>

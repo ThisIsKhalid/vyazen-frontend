@@ -2,6 +2,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
+import uxuidesign from '@/assets/images/ux ui design.png';
 
 interface ServiceCardProps {
   title: string
@@ -21,7 +22,7 @@ export function ServiceCard({ title, description, image, slug, className = "" }:
         </div>
         {image && (
           <div className="relative w-32 h-24 rounded-lg overflow-hidden">
-            <Image src={image || "/placeholder.svg"} alt={title} fill className="object-cover" />
+            <Image src={uxuidesign } alt={title} fill className="object-cover" />
           </div>
         )}
       </div>
