@@ -17,35 +17,35 @@ export default function TermsPage() {
           </p>
           <ul className="list-none space-y-3 pt-[10px] font-satoshi font-medium">
             <li className="flex items-start ">
-              <span className="w-2.5 h-2.5 bg-yellow-400 rotate-45 mr-3 mt-2 block"></span>
+              <span className="w-2.5 h-2.5 bg-yellow-primary rotate-45 mr-3 mt-2 block"></span>
               <p>
                 Diam dictumst faucibus dui aliquet acenean nascetur feugiat leo
                 Etiam dignissim orci dignissim.
               </p>
             </li>
             <li className="flex items-start">
-              <span className="w-2.5 h-2.5 bg-yellow-400 rotate-45 mr-3 mt-2 block"></span>
+              <span className="w-2.5 h-2.5 bg-yellow-primary rotate-45 mr-3 mt-2 block"></span>
               <p>
                 Blandit dignissim nulla varius tristique a sed integer ut tempor
                 Diam dictumst faucibus.
               </p>
             </li>
             <li className="flex items-start">
-              <span className="w-2.5 h-2.5 bg-yellow-400 rotate-45 mr-3 mt-2 block"></span>
+              <span className="w-2.5 h-2.5 bg-yellow-primary rotate-45 mr-3 mt-2 block"></span>
               <p>
                 Ed nam vulputate pellentesque quis. Varius a, nunc faucibus
                 proin elementum id odio auctor.
               </p>
             </li>
             <li className="flex items-start">
-              <span className="w-2.5 h-2.5 bg-yellow-400 rotate-45 mr-3 mt-2 block"></span>
+              <span className="w-2.5 h-2.5 bg-yellow-primary rotate-45 mr-3 mt-2 block"></span>
               <p>
                 Integer interdum sodales scelerisque diam massa quam sit quis,
                 sed et dui a nam pulvinar.
               </p>
             </li>
             <li className="flex items-start">
-              <span className="w-2.5 h-2.5 bg-yellow-400 rotate-45 mr-3 mt-1 block"></span>
+              <span className="w-2.5 h-2.5 bg-yellow-primary rotate-45 mr-3 mt-1 block"></span>
               <p>
                 Pretium consectetur scelerisque blandit habitasse non
                 ullamcorper enim.
@@ -87,35 +87,35 @@ export default function TermsPage() {
           </p>
           <ul className="list-none space-y-2  font-satoshi font-medium">
             <li className="flex items-start">
-              <span className="w-2.5 h-2.5 bg-yellow-400 rotate-45 mr-3 mt-2 block"></span>
+              <span className="w-2.5 h-2.5 bg-yellow-primary rotate-45 mr-3 mt-2 block"></span>
               <p>
                 Diam dictumst faucibus dui aliquet acenean nascetur feugiat leo
                 Etiam dignissim orci dignissim.
               </p>
             </li>
             <li className="flex items-start">
-              <span className="w-2.5 h-2.5 bg-yellow-400 rotate-45 mr-3 mt-2 block"></span>
+              <span className="w-2.5 h-2.5 bg-yellow-primary rotate-45 mr-3 mt-2 block"></span>
               <p>
                 Blandit dignissim nulla varius tristique a sed integer ut tempor
                 Diam dictumst faucibus.
               </p>
             </li>
             <li className="flex items-start">
-              <span className="w-2.5 h-2.5 bg-yellow-400 rotate-45 mr-3 mt-2 block"></span>
+              <span className="w-2.5 h-2.5 bg-yellow-primary rotate-45 mr-3 mt-2 block"></span>
               <p>
                 Ed nam vulputate pellentesque quis. Varius a, nunc faucibus
                 proin elementum id odio auctor.
               </p>
             </li>
             <li className="flex items-start">
-              <span className="w-2.5 h-2.5 bg-yellow-400 rotate-45 mr-3 mt-2 block"></span>
+              <span className="w-2.5 h-2.5 bg-yellow-primary rotate-45 mr-3 mt-2 block"></span>
               <p>
                 Integer interdum sodales scelerisque diam massa quam sit quis,
                 sed et dui a nam pulvinar.
               </p>
             </li>
             <li className="flex items-start">
-              <span className="w-2.5 h-2.5 bg-yellow-400 rotate-45 mr-3 mt-1 block"></span>
+              <span className="w-2.5 h-2.5 bg-yellow-primary rotate-45 mr-3 mt-1 block"></span>
               <p>
                 Pretium consectetur scelerisque blandit habitasse non
                 ullamcorper enim.
