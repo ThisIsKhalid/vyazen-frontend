@@ -25,7 +25,7 @@ export default function ProductsPage() {
         />
 
         {/* projects */}
-        <div className="md:mt-20 mt-10 grid grid-cols-3 gap-6">
+        <div className="md:mt-20 mt-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
           <ProductCard />
           <ProductCard />
           <ProductCard />
