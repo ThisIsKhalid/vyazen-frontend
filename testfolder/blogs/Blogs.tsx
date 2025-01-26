@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import posts from "./../../../assets/data/posts.json"; // Adjust the path as necessary
+import { CiCalendar, CiPen } from "react-icons/ci";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { CiPen } from "react-icons/ci";
-import { CiCalendar } from "react-icons/ci";
+import posts from "../../src/assets/data/posts.json"; // Adjust the path as necessary
 
 export default function Blogs() {
   const featuredPost = posts.posts.find((post) => post.featured);

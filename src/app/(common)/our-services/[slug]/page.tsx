@@ -1,7 +1,7 @@
-import Image from "next/image";
-import CallToAction from "@/components/shared/CallToAction/CallToAction";
 import image from "@/assets/images/details img.png";
-import ServiceSidebar from "@/components/pages/Services/ServiceSidebar";
+import CallToAction from "@/components/shared/CallToAction/CallToAction";
+import Image from "next/image";
+import ServiceSidebar from "../../../../../testfolder/services/ServiceSidebar";
 
 import { LiaAwardSolid } from "react-icons/lia";
 
@@ -125,8 +125,7 @@ export default function ServiceDetails() {
                 Why You Should Choose Our UX/UI Service:
               </h2>
               <div className="space-y-6">
-               
- <div className="space-y-6">
+                <div className="space-y-6">
                   {/* Creative Campaign Excellence */}
                   <div className="flex items-center bg-gray-100 p-6 sm:p-8 rounded-lg shadow-md">
                     <div className="w-1/2 pr-6">
