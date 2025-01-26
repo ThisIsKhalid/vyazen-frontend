@@ -10,13 +10,13 @@ export default function blog() {
       <PageHeader title="Blogs" subtitle="Blogs" />
       <div className="container  md:mt-[140px] sm:mt-[70px] mt-[50px]">
         <SectionHeader
-          subtitle="GET IN TOUCH"
+          subtitle="NEWS & ARTICLES"
           subtitleClass="white"
           title={
             <>
-              <span className="font-bold">Need </span> Assistance
+              <span className="font-bold">Discover </span> the Latest in
               <br />
-              Want to <span className="font-bold"> Collaborate!</span>
+              Digital <span className="font-bold"> Innovation.</span>
             </>
           }
           titleClass="md:text-[64px] md:leading-[74px]"

@@ -76,7 +76,7 @@ export default function Blogs() {
             </h2>
             {/* View Details Link */}
             <Link
-              href={`/blog/${post.id}`}
+              href={`/our-blogs/${post.id}`}
               className="inline-flex items-center gap-2 text-black hover:text-gray-900 transition-colors group"
             >
               <span className="font-bold font-satoshi">View Details</span>
