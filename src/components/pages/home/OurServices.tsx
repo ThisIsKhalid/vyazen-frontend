@@ -1,13 +1,45 @@
-"use client"
+"use client";
 import SectionHeader from "@/components/shared/SectionHeader/SectionHeader";
-import Image from "next/image"
+import Image from "next/image";
 import { useState } from "react";
 
+export default function Accordion() {
+  const [activeSection, setActiveSection] = useState(null);
 
-export default function ServicesSection() {
-  const [showUXImage, setShowUXImage] = useState(false)
+  const toggleSection = (index) => {
+    setActiveSection(activeSection === index ? null : index);
+  };
 
-
+  const sections = [
+    {
+      id: 1,
+      title: "UI/UX Design",
+      tags: ["UI/UX", "Webflow", "Envato"],
+      imageUrl:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/our-service%20image-1VQ2ML3OIsWLbnXkTBNohAB0Ux80R3.png",
+    },
+    {
+      id: 2,
+      title: "Web Development",
+      tags: ["UI/UX", "Webflow", "Envato"],
+      imageUrl:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/our-service%20image-1VQ2ML3OIsWLbnXkTBNohAB0Ux80R3.png",
+    },
+    {
+      id: 3,
+      title: "Digital Marketing",
+      tags: ["UI/UX", "Webflow", "Envato"],
+      imageUrl:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/our-service%20image-1VQ2ML3OIsWLbnXkTBNohAB0Ux80R3.png",
+    },
+    {
+      id: 4,
+      title: "Graphic Design",
+      tags: ["UI/UX", "Webflow", "Envato"],
+      imageUrl:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/our-service%20image-1VQ2ML3OIsWLbnXkTBNohAB0Ux80R3.png",
+    },
+  ];
 
   return (
     <section className="bg-customGradient md:mt-[140px] sm:mt-[70px] mt-[50px]">
@@ -24,136 +56,65 @@ export default function ServicesSection() {
           titleClass="md:text-[64px] md:leading-[74px] text-white"
         />
 
-<div className="flex justify-end">
-<div className="mt-16 space-y-8 w-full sm:w-4/5 md:w-2/3">
-  <div className="border-t border-white/10 pt-8 group">
-    <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 md:gap-12">
-      <span className="text-white/60 font-light">01</span>
-      <div className="flex-1">
-        <div className="flex flex-col sm:flex-row justify-between">
-          <h3
-            className="text-lg sm:text-xl md:text-[32px] font-bold text-white group-hover:text-white/80 transition-colors mb-4 cursor-pointer"
-            onClick={() => setShowUXImage(!showUXImage)}
-          >
-            UI/UX Design
-          </h3>
-          <div className="flex flex-wrap gap-2 mt-2">
-            <span className="text-white/60">•</span>
-            <span className="text-white/60 text-sm hover:text-white transition-colors cursor-pointer">
-              UI/UX
-            </span>
-            <span className="mx-2 sm:mx-4 text-white/60">•</span>
-            <span className="text-white/60 text-sm hover:text-white transition-colors cursor-pointer">
-              Webflow
-            </span>
-            <span className="mx-2 sm:mx-4 text-white/60">•</span>
-            <span className="text-white/60 text-sm hover:text-white transition-colors cursor-pointer">
-              Envato
-            </span>
+        <div className="flex justify-end">
+          <div className="mt-16 space-y-8 w-full sm:w-4/5 md:w-2/3">
+            {sections.map((section, index) => (
+              <div
+                key={section.id}
+                className="border-t border-white/10 pt-8 group"
+              >
+                <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 md:gap-12">
+                  <span className="text-white/60 font-light">{`0${section.id}`}</span>
+                  <div className="flex-1">
+                    <div className="flex flex-col sm:flex-row justify-between">
+                      <h3
+                        className={`text-lg sm:text-xl md:text-[32px] font-bold ${
+                          activeSection === index
+                            ? "text-white"
+                            : "text-[#FFFFFF66]"
+                        }  transition-colors mb-4 cursor-pointer`}
+                        onClick={() => toggleSection(index)}
+                      >
+                        {section.title}
+                      </h3>
+                      <div className="flex flex-wrap gap-2 mt-2">
+                        {section.tags.map((tag, idx) => (
+                          <span
+                            key={idx}
+                            className={`text-sm cursor-pointer transition-colors ${
+                              activeSection === index
+                                ? "text-white"
+                                : "text-white/60"
+                            } hover:text-white`}
+                          >
+                            {idx !== 0 && (
+                              <span className="mx-2 text-white/60">•</span>
+                            )}
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    {activeSection === index && (
+                      <div className="mt-4">
+                        <div className="relative w-full aspect-[3/1] rounded-xl overflow-hidden">
+                          <Image
+                            src={section.imageUrl}
+                            alt={`${section.title} Preview`}
+                            fill
+                            className="object-cover"
+                            sizes="(min-width: 909px) 909px, 100vw"
+                          />
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
-        {showUXImage && (
-          <div className="mt-4">
-            <div className="relative w-full aspect-[3/1] rounded-xl overflow-hidden">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/our-service%20image-1VQ2ML3OIsWLbnXkTBNohAB0Ux80R3.png"
-                alt="UI/UX Design Preview"
-                fill
-                className="object-cover"
-                sizes="(min-width: 909px) 909px, 100vw"
-              />
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
-  </div>
-
-  <div className="border-t border-white/10 pt-8 group">
-    <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-12">
-      <span className="text-white/60 font-light">02</span>
-      <div className="flex-1">
-        <div className="flex flex-col sm:flex-row justify-between">
-          <h3 className="text-lg sm:text-xl md:text-2xl font-light text-white group-hover:text-white/80 transition-colors mb-4">
-            Web Development
-          </h3>
-          <div className="flex flex-wrap gap-2 mt-2">
-            <span className="text-white/60">•</span>
-            <span className="text-white/60 text-sm hover:text-white transition-colors cursor-pointer">
-              UI/UX
-            </span>
-            <span className="mx-2 sm:mx-4 text-white/60">•</span>
-            <span className="text-white/60 text-sm hover:text-white transition-colors cursor-pointer">
-              Webflow
-            </span>
-            <span className="mx-2 sm:mx-4 text-white/60">•</span>
-            <span className="text-white/60 text-sm hover:text-white transition-colors cursor-pointer">
-              Envato
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div className="border-t border-white/10 pt-8 group">
-    <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 md:gap-12">
-      <span className="text-white/60 font-light">03</span>
-      <div className="flex-1">
-        <div className="flex flex-col sm:flex-row justify-between">
-          <h3 className="text-lg sm:text-xl md:text-2xl font-light text-white group-hover:text-white/80 transition-colors mb-4">
-            App Development
-          </h3>
-          <div className="flex flex-wrap gap-2 mt-2">
-            <span className="text-white/60">•</span>
-            <span className="text-white/60 text-sm hover:text-white transition-colors cursor-pointer">
-              UI/UX
-            </span>
-            <span className="mx-2 sm:mx-4 text-white/60">•</span>
-            <span className="text-white/60 text-sm hover:text-white transition-colors cursor-pointer">
-              Webflow
-            </span>
-            <span className="mx-2 sm:mx-4 text-white/60">•</span>
-            <span className="text-white/60 text-sm hover:text-white transition-colors cursor-pointer">
-              Envato
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div className="border-t border-white/10 pt-8 group">
-    <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 md:gap-12">
-      <span className="text-white/60 font-light">04</span>
-      <div className="flex-1">
-        <div className="flex flex-col sm:flex-row justify-between">
-          <h3 className="text-lg sm:text-xl md:text-2xl font-light text-white group-hover:text-white/80 transition-colors mb-4">
-            Branding & Identity
-          </h3>
-          <div className="flex flex-wrap gap-2 mt-2">
-            <span className="text-white/60">•</span>
-            <span className="text-white/60 text-sm hover:text-white transition-colors cursor-pointer">
-              UI/UX
-            </span>
-            <span className="mx-2 sm:mx-4 text-white/60">•</span>
-            <span className="text-white/60 text-sm hover:text-white transition-colors cursor-pointer">
-              Webflow
-            </span>
-            <span className="mx-2 sm:mx-4 text-white/60">•</span>
-            <span className="text-white/60 text-sm hover:text-white transition-colors cursor-pointer">
-              Envato
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
         </div>
       </div>
     </section>
-  )
+  );
 }
-
