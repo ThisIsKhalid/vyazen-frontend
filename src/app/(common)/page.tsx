@@ -1,3 +1,5 @@
+import AgencyBanner from "@/components/pages/home/AgencyBannerSection";
+import HeroSection from "@/components/pages/home/HeroSection";
 import OurProcess from "@/components/pages/home/OurProcess";
 import OurProducts from "@/components/pages/home/OurProducts";
 import OurServices from "@/components/pages/home/OurServices";
@@ -10,6 +12,8 @@ import React from "react";
 const HomePage = () => {
   return (
     <div>
+      <HeroSection/>
+      <AgencyBanner/>
       <AboutUs />
       <OurServices />
       <OurProducts />

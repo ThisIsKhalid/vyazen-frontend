@@ -43,45 +43,45 @@ export default function Accordion() {
 
   return (
     <section className="bg-customGradient md:mt-[140px] sm:mt-[70px] mt-[50px]">
-      <div className="container md:py-[140px] sm:py-[70px] py-[50px] ">
+      <div className="container md:py-[140px] sm:py-[70px] py-[50px]">
         <SectionHeader
           subtitle="OUR SERVICES"
           subtitleClass="gradient"
-          title={
+          title={(
             <>
               <span className="font-bold">Innovative</span> Solutions for <br />
               Modern <span className="font-bold">Challenges.</span>
             </>
-          }
-          titleClass="md:text-[64px] md:leading-[74px] text-white"
+          )}
+          titleClass="md:text-[64px] md:leading-[74px] text-white text-2xl sm:text-4xl"
         />
 
         <div className="flex justify-end">
-          <div className="mt-16 space-y-8 w-full sm:w-4/5 md:w-2/3">
+          <div className="mt-10 sm:mt-16 space-y-6 sm:space-y-8 w-full sm:w-4/5 md:w-2/3">
             {sections.map((section, index) => (
               <div
                 key={section.id}
-                className="border-t border-white/10 pt-8 group"
+                className="border-t border-white/10 pt-6 sm:pt-8 group"
               >
-                <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 md:gap-12">
-                  <span className="text-white/60 font-light">{`0${section.id}`}</span>
+                <div className="flex flex-col sm:flex-row items-start  sm:items-center gap-4 sm:gap-6">
+                  <span className="text-white/60 font-light text-sm  sm:text-base">{`0${section.id}`}</span>
                   <div className="flex-1">
                     <div className="flex flex-col sm:flex-row justify-between">
                       <h3
-                        className={`text-lg sm:text-xl md:text-[32px] font-bold ${
+                        className={`text-base sm:text-lg md:text-[32px] font-bold ${
                           activeSection === index
                             ? "text-white"
                             : "text-[#FFFFFF66]"
-                        }  transition-colors mb-4 cursor-pointer`}
+                        } transition-colors mb-2 sm:mb-4 cursor-pointer`}
                         onClick={() => toggleSection(index)}
                       >
                         {section.title}
                       </h3>
-                      <div className="flex flex-wrap gap-2 mt-2">
+                      <div className="flex  gap-2 mt-2">
                         {section.tags.map((tag, idx) => (
                           <span
                             key={idx}
-                            className={`text-sm cursor-pointer transition-colors ${
+                            className={`text-xs sm:text-sm cursor-pointer transition-colors ${
                               activeSection === index
                                 ? "text-white"
                                 : "text-white/60"
@@ -97,7 +97,7 @@ export default function Accordion() {
                     </div>
                     {activeSection === index && (
                       <div className="mt-4">
-                        <div className="relative w-full aspect-[3/1] rounded-xl overflow-hidden">
+                        <div className="relative w-full aspect-[4/3] sm:aspect-[3/1] rounded-xl overflow-hidden">
                           <Image
                             src={section.imageUrl}
                             alt={`${section.title} Preview`}
