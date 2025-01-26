@@ -2,7 +2,7 @@ import CallToAction from "@/components/shared/CallToAction/CallToAction";
 import FAQ from "@/components/shared/FAQ/FAQ";
 import PageHeader from "@/components/shared/PageHeader/PageHeader";
 import React from "react";
-import TermsPage from "../../../../testfolder/TermAndCondition/page";
+import TermsPage from "../../../components/pages/termAndCondition/TermsAndCondition";
 
 export default function TermsConditions() {
   return (

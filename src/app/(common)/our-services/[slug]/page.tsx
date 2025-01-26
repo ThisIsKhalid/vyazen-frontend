@@ -1,7 +1,7 @@
 import image from "@/assets/images/details img.png";
 import CallToAction from "@/components/shared/CallToAction/CallToAction";
 import Image from "next/image";
-import ServiceSidebar from "../../../../../testfolder/services/ServiceSidebar";
+import ServiceSidebar from "../../../../components/pages/services/ServiceSidebar";
 
 import { LiaAwardSolid } from "react-icons/lia";
 

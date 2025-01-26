@@ -3,7 +3,7 @@ import FAQ from "@/components/shared/FAQ/FAQ";
 import PageHeader from "@/components/shared/PageHeader/PageHeader";
 import SectionHeader from "@/components/shared/SectionHeader/SectionHeader";
 import React from "react";
-import ServicePage from "../../../../testfolder/services/page";
+import ServicePage from "../../../components/pages/services/Services";
 
 export default function OurServicesPage() {
   return (

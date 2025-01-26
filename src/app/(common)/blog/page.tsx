@@ -2,7 +2,7 @@ import CallToAction from "@/components/shared/CallToAction/CallToAction";
 import FAQ from "@/components/shared/FAQ/FAQ";
 import PageHeader from "@/components/shared/PageHeader/PageHeader";
 import SectionHeader from "@/components/shared/SectionHeader/SectionHeader";
-import Blogs from "../../../../testfolder/Blogs/page";
+import Blogs from "../../../components/pages/blogs/Blogs";
 
 export default function blog() {
   return (
