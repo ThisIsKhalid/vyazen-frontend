@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import SectionHeader from "@/components/shared/SectionHeader/SectionHeader";
 import Image from "next/image";
@@ -6,7 +7,7 @@ import { useState } from "react";
 export default function Accordion() {
   const [activeSection, setActiveSection] = useState(null);
 
-  const toggleSection = (index) => {
+  const toggleSection = (index: any) => {
     setActiveSection(activeSection === index ? null : index);
   };
 
@@ -47,12 +48,12 @@ export default function Accordion() {
         <SectionHeader
           subtitle="OUR SERVICES"
           subtitleClass="gradient"
-          title={(
+          title={
             <>
               <span className="font-bold">Innovative</span> Solutions for <br />
               Modern <span className="font-bold">Challenges.</span>
             </>
-          )}
+          }
           titleClass="md:text-[64px] md:leading-[74px] text-white text-2xl sm:text-4xl"
         />
 

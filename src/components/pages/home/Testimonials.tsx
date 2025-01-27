@@ -36,6 +36,7 @@ const Testimonials = () => {
             clickable: true,
           }}
           modules={[]}
+          className="overflow-visible border border-red-500"
         >
           <SwiperSlide>
             <TestimonialCard />

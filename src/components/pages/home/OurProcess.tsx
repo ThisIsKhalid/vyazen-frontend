@@ -1,6 +1,13 @@
+"use client";
+
 import SectionHeader from "@/components/shared/SectionHeader/SectionHeader";
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import InfoCard from "./InfoCard";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
 
 const OurProcess = () => {
   return (
@@ -29,8 +36,42 @@ const OurProcess = () => {
         />
 
         <div className="mt-24">
-          {/* info card */}
-          <InfoCard />
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={20}
+            pagination={{
+              clickable: true,
+            }}
+            loop={true}
+            grabCursor={true}
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+              1280: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+            }}
+            modules={[]}
+          >
+            <SwiperSlide>
+              <InfoCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <InfoCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <InfoCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <InfoCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <InfoCard />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
     </section>

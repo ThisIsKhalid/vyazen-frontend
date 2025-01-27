@@ -6,7 +6,7 @@ const TestimonialCard = () => {
   return (
     <div className="relative bg-[#F8F8F8] rounded-[20px]  max-w-sm">
       {/* Quote Icon */}
-      <div className="absolute -top-8 left-8">
+      <div className="absolute -top-8 left-8 z-[999]">
         <div className="bg-yellow-primary text-black rounded-full p-4 shadow-md flex items-center justify-center">
           <FaQuoteLeft className="h-6 w-6" />
         </div>
