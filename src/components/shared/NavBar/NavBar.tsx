@@ -1,14 +1,17 @@
 "use client";
 
 import navLogo from "@/assets/images/nav-logo.png";
+import cn from "@/lib/cn";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaPlus } from "react-icons/fa"; // Dropdown icon
 import { FiMenu, FiX } from "react-icons/fi"; // Menu and close icons
+import ProductsNavbar from "./ProductsNavbar";
 
 const NavBar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [showProducts, setShowProducts] = useState(false);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -51,13 +54,21 @@ const NavBar = () => {
                 About Us
               </Link>
             </li>
-            <li className="relative group">
-              <a
-                href="#products"
-                className="text-base leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out  flex items-center"
+            <li
+              className="relative group"
+              onMouseEnter={() => setShowProducts(true)}
+              onClick={() => setShowProducts(!showProducts)}
+            >
+              <p
+                className={cn(
+                  "text-base leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out  flex items-center",
+                  {
+                    "text-yellow-primary": showProducts,
+                  }
+                )}
               >
                 Products <FaPlus className="ml-1 text-xs" />
-              </a>
+              </p>
             </li>
             <li className="relative group">
               <a
@@ -88,6 +99,15 @@ const NavBar = () => {
           </button>
         </section>
       </nav>
+
+      {/* ProductsNavbar */}
+      {showProducts && (
+        <div className="absolute container w-full flex items-center justify-center z-50"
+        onClick={() => setShowProducts(false)}
+        >
+          <ProductsNavbar />
+        </div>
+      )}
 
       {/* Sidebar for Mobile */}
       <div
