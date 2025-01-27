@@ -8,7 +8,6 @@ import Services from "../../../components/pages/services/Services";
 export default function OurServicesPage() {
   return (
     <div>
-      {" "}
       <PageHeader title="Services" subtitle="Services" />
       <div className="container md:mt-[140px] sm:mt-[70px] mt-[50px]">
         <SectionHeader
@@ -25,7 +24,7 @@ export default function OurServicesPage() {
           align="center"
         />
       </div>
-      <div className=" md:mt-[80px] sm:mt-[70px] mt-[50px]">
+      <div className="md:mt-[80px] sm:mt-[70px] mt-[50px]">
         <Services />
       </div>
       <FAQ />

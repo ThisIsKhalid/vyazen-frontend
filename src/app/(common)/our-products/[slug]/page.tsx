@@ -21,7 +21,7 @@ export default function SingleProductPage() {
   return (
     <section>
       <PageHeader title="Product Single" subtitle="Product Details" />
-      <div className="container mx-auto px-4 md:mt-[140px] sm:mt-[70px] mt-[50px]">
+      <div className="container mx-auto md:mt-[140px] sm:mt-[70px] mt-[50px]">
         <div className="flex flex-wrap md:justify-center  lg:flex-nowrap gap-6">
           {/* Main Content */}
           <div className="lg:w-[816px] ">

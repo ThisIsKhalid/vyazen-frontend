@@ -31,7 +31,7 @@ export default function AboutUsPage() {
   return (
     <div>
       <PageHeader title="About Us" subtitle="About Us" />
-      <div className="container  md:mt-[140px] sm:mt-[70px] mt-[50px]">
+      <div className="container md:mt-[140px] sm:mt-[70px] mt-[50px]">
         <SectionHeader
           subtitle="ABOUT US"
           subtitleClass="white"
@@ -46,7 +46,7 @@ export default function AboutUsPage() {
         />
       </div>
       {/*Images section */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto py-12">
         <div className="flex flex-col md:flex-row gap-4">
           {/* Image 1 */}
           <div className="relative overflow-hidden rounded-lg flex-1">
