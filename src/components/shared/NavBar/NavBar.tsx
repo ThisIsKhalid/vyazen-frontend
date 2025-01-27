@@ -8,9 +8,11 @@ import React, { useState } from "react";
 import { FaPlus } from "react-icons/fa"; // Dropdown icon
 import { FiMenu, FiX } from "react-icons/fi"; // Menu and close icons
 import ProductsNavbar from "./ProductsNavbar";
+import ServicesNavbar from "./ServicesNavbar";
 
 const NavBar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [showServices, setShowServices] = useState(false);
   const [showProducts, setShowProducts] = useState(false);
 
   const toggleSidebar = () => {
@@ -56,10 +58,14 @@ const NavBar = () => {
             </li>
             <li
               className="relative group"
-              onMouseEnter={() => setShowProducts(true)}
+              onMouseEnter={() => {
+                setShowProducts(true);
+                setShowServices(false);
+              }}
               onClick={() => setShowProducts(!showProducts)}
             >
-              <p
+              <Link
+                href="/our-products"
                 className={cn(
                   "text-base leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out  flex items-center",
                   {
@@ -68,23 +74,35 @@ const NavBar = () => {
                 )}
               >
                 Products <FaPlus className="ml-1 text-xs" />
-              </p>
+              </Link>
             </li>
-            <li className="relative group">
-              <a
-                href="#our-services"
-                className="text-base leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out  flex items-center"
+            <li
+              className="relative group"
+              onMouseEnter={() => {
+                setShowServices(true);
+                setShowProducts(false);
+              }}
+              onClick={() => setShowServices(!showServices)}
+            >
+              <Link
+                href="/our-services"
+                className={cn(
+                  "text-base leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out  flex items-center",
+                  {
+                    "text-yellow-primary": showServices,
+                  }
+                )}
               >
                 Services <FaPlus className="ml-1 text-xs" />
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#blog"
+              <Link
+                href="/our-blogs"
                 className="text-base leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out "
               >
-                Blog
-              </a>
+                Blogs
+              </Link>
             </li>
           </ul>
 
@@ -100,10 +118,21 @@ const NavBar = () => {
         </section>
       </nav>
 
+      {/* SErvicesNavbar */}
+      {showServices && (
+        <div
+          className="absolute container w-full flex items-center justify-center z-50"
+          onClick={() => setShowServices(false)}
+        >
+          <ServicesNavbar />
+        </div>
+      )}
+
       {/* ProductsNavbar */}
       {showProducts && (
-        <div className="absolute container w-full flex items-center justify-center z-50"
-        onClick={() => setShowProducts(false)}
+        <div
+          className="absolute container w-full flex items-center justify-center z-50"
+          onClick={() => setShowProducts(false)}
         >
           <ProductsNavbar />
         </div>

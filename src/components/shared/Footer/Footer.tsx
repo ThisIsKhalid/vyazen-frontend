@@ -75,14 +75,14 @@ const Footer = () => {
           </h3>
           <ul className="flex flex-col gap-y-4 text-base font-satoshi font-medium">
             <li>
-              <a href="#about" className="hover:text-yellow-primary">
+              <Link href="/about-us" className="hover:text-yellow-primary">
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#services" className="hover:text-yellow-primary">
+              <Link href="our-services" className="hover:text-yellow-primary">
                 Our Services
-              </a>
+              </Link>
             </li>
             <li>
               <a href="#privacy" className="hover:text-yellow-primary">
@@ -90,9 +90,9 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="#contact" className="hover:text-yellow-primary">
+              <Link href="/contact-us" className="hover:text-yellow-primary">
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -104,24 +104,27 @@ const Footer = () => {
           </h3>
           <ul className="flex flex-col gap-y-4 text-base font-satoshi font-medium">
             <li>
-              <a href="#about" className="hover:text-yellow-primary">
+              <Link href="/about-us" className="hover:text-yellow-primary">
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#services" className="hover:text-yellow-primary">
+              <Link href="our-services" className="hover:text-yellow-primary">
                 Our Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#privacy" className="hover:text-yellow-primary">
-                Privacy Policy
-              </a>
+              <Link
+                href="/terms-conditions"
+                className="hover:text-yellow-primary"
+              >
+                Terms & Conditons
+              </Link>
             </li>
             <li>
-              <a href="#contact" className="hover:text-yellow-primary">
+              <Link href="/contact-us" className="hover:text-yellow-primary">
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

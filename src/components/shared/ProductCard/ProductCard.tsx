@@ -1,5 +1,6 @@
 import projectImg from "@/assets/images/project.png";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { MdOutlineArrowOutward } from "react-icons/md";
 
@@ -35,10 +36,13 @@ const ProductCard = () => {
           <p className="font-satoshi font-bold text-[18px] leading-[42px] text-black">
             $79 USD
           </p>
-          <button className="flex items-center gap-2 font-satoshi font-bold text-[18px] leading-[42px] text-black">
+          <Link
+            href="/our-products/some-product"
+            className="flex items-center gap-2 font-satoshi font-bold text-[18px] leading-[42px] text-black"
+          >
             PREVIEW
             <MdOutlineArrowOutward className="font-bold text-2xl" />
-          </button>
+          </Link>
         </div>
       </div>
     </div>
