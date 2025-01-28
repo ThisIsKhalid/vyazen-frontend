@@ -59,7 +59,7 @@ export default function ServiceDetails() {
         ))}
       </div>
     </div>
-        </div>
+ </div>
 
         {/* Main Content */}
         <main>

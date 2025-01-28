@@ -1,4 +1,5 @@
-import postimg from "@/assets/images/featuredPostimg.jpeg";
+"use client";
+import postimg from "@/assets/images/service-swiper-image.jpg";
 import CallToAction from "@/components/shared/CallToAction/CallToAction";
 import PageHeader from "@/components/shared/PageHeader/PageHeader";
 import {
@@ -17,6 +18,11 @@ import { LiaShoppingCartSolid } from "react-icons/lia";
 import { MdLiveTv } from "react-icons/md";
 import { TbLayout2 } from "react-icons/tb";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+
 export default function SingleProductPage() {
   return (
     <section>
@@ -26,14 +32,105 @@ export default function SingleProductPage() {
           {/* Main Content */}
           <div className="lg:w-[816px] ">
             <div className="flex-1 w-full  ">
-              <div>
-                <Image
-                  src={postimg}
-                  alt=" "
-                  width={816}
-                  height={518}
-                  className="rounded-lg md:h-[518px]  w-full object-cover"
-                />
+              <div className="w-full max-w-5xl mx-auto">
+                <Swiper
+                  pagination={{
+                    clickable: true,
+                  }}
+                  modules={[Pagination]}
+                  className="mySwiper"
+                  spaceBetween={20}
+                  slidesPerView={1}
+                >
+                  <SwiperSlide>
+                    <Image
+                      src={postimg}
+                      alt="Slide 1"
+                      width={816}
+                      height={518}
+                      className="rounded-lg md:h-[518px] w-full object-cover"
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Image
+                      src={postimg}
+                      alt="Slide 2"
+                      width={816}
+                      height={518}
+                      className="rounded-lg md:h-[518px] w-full object-cover"
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Image
+                      src={postimg}
+                      alt="Slide 2"
+                      width={816}
+                      height={518}
+                      className="rounded-lg md:h-[518px] w-full object-cover"
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Image
+                      src={postimg}
+                      alt="Slide 2"
+                      width={816}
+                      height={518}
+                      className="rounded-lg md:h-[518px] w-full object-cover"
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Image
+                      src={postimg}
+                      alt="Slide 2"
+                      width={816}
+                      height={518}
+                      className="rounded-lg md:h-[518px] w-full object-cover"
+                    />
+                  </SwiperSlide>
+                  
+                </Swiper>
+
+                <style jsx global>{`
+                  /* Pagination Container */
+                  .swiper-pagination {
+                    width: 120px; /* Set width to 120px */
+                    height: 38px;
+                    justify-content: center;
+                    background: linear-gradient(
+                      to right,
+                      #b0b0b0,
+                      #00a000
+                    ); /* Gray to Green */
+                    padding: 8px 20px;
+                    border-radius: 20px;
+                    display: inline-flex;
+                    align-items: center;
+                  }
+
+                  /* Pagination Bullets */
+                  .swiper-pagination-bullet {
+                    background: rgba(
+                      255,
+                      255,
+                      255,
+                      0.6
+                    ); /* Semi-transparent white */
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    opacity: 1;
+                    margin: 0 5px;
+                    transition: all 0.3s ease-in-out;
+                  }
+
+                  /* Active Bullet */
+                  .swiper-pagination-bullet-active {
+                    background: radial-gradient(circle, yellow 50%, green 70%);
+                    width: 14px;
+                    height: 14px;
+                    border: 1px solid yellow;
+                  }
+                `}</style>
               </div>
 
               {/* Product Details Section */}
