@@ -18,26 +18,32 @@ import { LiaShoppingCartSolid } from "react-icons/lia";
 import { MdLiveTv } from "react-icons/md";
 import { TbLayout2 } from "react-icons/tb";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function SingleProductPage() {
   return (
     <section>
       <PageHeader title="Product Single" subtitle="Product Details" />
-      <div className="container mx-auto md:mt-[140px] sm:mt-[70px] mt-[50px]">
+      <div className="container  md:mt-[140px] sm:mt-[70px] mt-[50px]">
         <div className="flex flex-wrap md:justify-center  lg:flex-nowrap gap-6">
           {/* Main Content */}
           <div className="lg:w-[816px] ">
             <div className="flex-1 w-full  ">
-              <div className="w-full max-w-5xl mx-auto">
+              <div className="w-full max-w-5xl mx-auto border border-red-500 overflow-hidden">
                 <Swiper
                   pagination={{
                     clickable: true,
                   }}
-                  modules={[Pagination]}
+                  autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                  }}
+                  loop={true}
+                  grabCursor={true}
+                  modules={[Pagination, Autoplay]}
                   className="mySwiper"
                   spaceBetween={20}
                   slidesPerView={1}
@@ -87,7 +93,6 @@ export default function SingleProductPage() {
                       className="rounded-lg md:h-[518px] w-full object-cover"
                     />
                   </SwiperSlide>
-                
                 </Swiper>
 
                 <style jsx global>{`
@@ -102,7 +107,7 @@ export default function SingleProductPage() {
                     border-radius: 20px;
                     display: inline-flex;
                     align-items: center;
-                    justify-content:center;
+                    justify-content: center;
                   }
 
                   /* Pagination Bullets */
