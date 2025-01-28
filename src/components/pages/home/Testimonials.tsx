@@ -27,7 +27,7 @@ const Testimonials = () => {
       />
 
       {/* Testimonials */}
-      <div className=" overflow-hidden pt-20">
+      <div className=" overflow-hidden pt-20 mt-5">
         <Swiper
           slidesPerView={1}
           spaceBetween={20}

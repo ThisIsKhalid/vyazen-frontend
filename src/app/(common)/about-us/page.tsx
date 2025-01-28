@@ -12,7 +12,6 @@ import Image from "next/image";
 import React from "react";
 
 export default function AboutUsPage() {
-
   return (
     <div>
       <PageHeader title="About Us" subtitle="About Us" />
@@ -84,28 +83,23 @@ export default function AboutUsPage() {
       </div>
       <AboutUs />
       {/*Team Member section */}
-      <div className="min-h-screen w-full  bg-customGradient text-white p-8 md:p-16">
-        <div className="max-w-7xl mx-auto">
-          {/* Header */}
-          <div className="mb-12  md:flex">
-            <div>
-              <span className="py-1.5 px-8 rounded-full font-satoshi  font-bold text-sm md:text-base md:tracking-[8px] uppercase shadow-[1px_-2px_1px_0px_rgba(255,255,255,0.2)] border-2 border-olive-secondary  md:text-nowrap">
-                TEAM MEMBERS
-              </span>
-            </div>
-            <div className="md:mx-auto 0">
-              <h1 className="text-2xl my-8 md:my-0 md:text-5xl  font-light text-white">
-                <span className=" font-extrabold">Meet the </span>
+      <div className="min-h-screen w-full bg-customGradient text-white md:mt-[140px] sm:mt-[70px] mt-[50px] md:py-[140px] py-[70px]">
+        <div className="container">
+          <SectionHeader
+            subtitle="TEAM MEMBERS"
+            subtitleClass="gradient"
+            title={
+              <>
+                <span className=" font-bold">Meet the </span>
                 Experts
                 <br />
-                Behind <span className=" font-extrabold">Vyazen.</span>
-              </h1>
-            </div>
-          </div>
+                Behind <span className=" font-bold">Vyazen.</span>
+              </>
+            }
+            titleClass="md:text-[64px] md:leading-[74px]"
+          />
 
-         {/* Team Grid */}
-    <TeamGrid/>
-
+          <TeamGrid />
         </div>
       </div>
       <FAQ />
