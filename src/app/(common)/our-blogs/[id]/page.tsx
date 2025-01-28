@@ -29,7 +29,7 @@ export default async function BlogPost({
   return (
     <section>
       <PageHeader title="Blog Details" subtitle="Blog Details" />
-      <div className="container mx-auto px-4 pb-8 md:mt-[140px] sm:mt-[70px] mt-[50px]">
+      <div className="container pb-8 md:mt-[140px] sm:mt-[70px] mt-[50px]">
         <div className="flex flex-wrap md:justify-center  lg:flex-nowrap gap-6">
           {/* Main Content */}
           <div className="lg:w-[816px]">
