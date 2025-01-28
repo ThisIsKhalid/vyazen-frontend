@@ -57,8 +57,8 @@ const TeamGrid = () => {
             <p className="text-white text-sm">{member.role}</p>
 
             {/* Circular Arrow Button */}
-            <div className="mt-4 w-[88px] h-[88px] bg-black/80  rounded-full flex items-center justify-center shadow-md hover:bg-black/90 transition">
-              <HiOutlineArrowUpRight className="text-yellow-primary font-light w-10 h-10" />
+            <div className="mt-4 md:w-[88px] md:h-[88px] bg-black/80  rounded-full flex items-center justify-center shadow-md hover:bg-black/90 transition">
+              <HiOutlineArrowUpRight className="text-yellow-primary font-light w-8 h-8 md:w-10 md:h-10" />
             </div>
           </div>
         </div>
