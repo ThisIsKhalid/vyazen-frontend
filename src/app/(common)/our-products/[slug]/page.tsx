@@ -27,222 +27,205 @@ export default function SingleProductPage() {
   return (
     <section>
       <PageHeader title="Product Single" subtitle="Product Details" />
-      <div className="container  md:mt-[140px] sm:mt-[70px] mt-[50px]">
-        <div className="flex flex-wrap md:justify-center  lg:flex-nowrap gap-6">
+      <div className="container lg:mt-[140px] sm:mt-[70px] mt-[50px]">
+        <div className="flex flex-col lg:flex-row gap-5 justify-between">
           {/* Main Content */}
-          <div className="lg:w-[816px] ">
-            <div className="flex-1 w-full  ">
-              <div className="w-full max-w-5xl mx-auto border border-red-500 overflow-hidden">
-                <Swiper
-                  pagination={{
-                    clickable: true,
-                  }}
-                  autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                  }}
-                  loop={true}
-                  grabCursor={true}
-                  modules={[Pagination, Autoplay]}
-                  className="mySwiper"
-                  spaceBetween={20}
-                  slidesPerView={1}
-                >
-                  <SwiperSlide>
-                    <Image
-                      src={postimg}
-                      alt="Slide 1"
-                      width={816}
-                      height={518}
-                      className="rounded-lg md:h-[518px] w-full object-cover"
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <Image
-                      src={postimg}
-                      alt="Slide 2"
-                      width={816}
-                      height={518}
-                      className="rounded-lg md:h-[518px] w-full object-cover"
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <Image
-                      src={postimg}
-                      alt="Slide 2"
-                      width={816}
-                      height={518}
-                      className="rounded-lg md:h-[518px] w-full object-cover"
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <Image
-                      src={postimg}
-                      alt="Slide 2"
-                      width={816}
-                      height={518}
-                      className="rounded-lg md:h-[518px] w-full object-cover"
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <Image
-                      src={postimg}
-                      alt="Slide 2"
-                      width={816}
-                      height={518}
-                      className="rounded-lg md:h-[518px] w-full object-cover"
-                    />
-                  </SwiperSlide>
-                </Swiper>
+          <div className="xl:w-[800px] lg:w-[600px] w-full">
+            <div className="overflow-hidden">
+              <Swiper
+                pagination={{
+                  clickable: true,
+                }}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                loop={true}
+                grabCursor={true}
+                modules={[Pagination, Autoplay]}
+                className="mySwiper"
+                spaceBetween={20}
+                slidesPerView={1}
+              >
+                <SwiperSlide>
+                  <Image
+                    src={postimg}
+                    alt="Slide 1"
+                    width={816}
+                    height={518}
+                    className="rounded-lg md:h-[518px] w-full object-cover"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image
+                    src={postimg}
+                    alt="Slide 2"
+                    width={816}
+                    height={518}
+                    className="rounded-lg md:h-[518px] w-full object-cover"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image
+                    src={postimg}
+                    alt="Slide 2"
+                    width={816}
+                    height={518}
+                    className="rounded-lg md:h-[518px] w-full object-cover"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image
+                    src={postimg}
+                    alt="Slide 2"
+                    width={816}
+                    height={518}
+                    className="rounded-lg md:h-[518px] w-full object-cover"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image
+                    src={postimg}
+                    alt="Slide 2"
+                    width={816}
+                    height={518}
+                    className="rounded-lg md:h-[518px] w-full object-cover"
+                  />
+                </SwiperSlide>
+              </Swiper>
 
-                <style jsx global>{`
-                  /* Pagination Container */
-                  .swiper-pagination {
-                    background: linear-gradient(
-                      to right,
-                      #b0b0b0,
-                      #00a000
-                    ); /* Gray to Green */
-                    padding: 8px 20px;
-                    border-radius: 20px;
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                  }
+              <style jsx global>{`
+                /* Pagination Container */
+                .swiper-pagination {
+                  background: linear-gradient(to right, #b0b0b0, #00a000);
+                  padding: 8px 12px; // Reduced horizontal padding
+                  border-radius: 10px; // Smaller rounded corners
+                  display: inline-flex;
+                  max-width: 120px; // Constrain maximum width
+                }
 
-                  /* Pagination Bullets */
-                  .swiper-pagination-bullet {
-                    background: rgba(
-                      255,
-                      255,
-                      255,
-                      0.6
-                    ); /* Semi-transparent white */
-                    width: 10px;
-                    height: 10px;
-                    border-radius: 50%;
-                    opacity: 1;
-                    margin: 0 5px;
-                    transition: all 0.3s ease-in-out;
-                  }
+                /* Pagination Bullets */
+                .swiper-pagination-bullet {
+                  background: rgba(255, 255, 255, 0.6);
+                  width: 8px; // Smaller bullets
+                  height: 8px;
+                  border-radius: 50%;
+                  margin: 0 3px; // Reduced spacing between bullets
+                  transition: all 0.3s ease-in-out;
+                }
 
-                  /* Active Bullet */
-                  .swiper-pagination-bullet-active {
-                    background: radial-gradient(circle, yellow 50%, green 70%);
-                    width: 14px;
-                    height: 14px;
-                    border: 1px solid yellow;
-                  }
-                `}</style>
-              </div>
+                /* Active Bullet */
+                .swiper-pagination-bullet-active {
+                  background: radial-gradient(circle, yellow 50%, green 70%);
+                  width: 12px; // Slightly less size increase
+                  height: 12px;
+                  border: 1px solid yellow;
+                }
+              `}</style>
+            </div>
 
-              {/* Product Details Section */}
-              <div className="md:max-w-screen-lg mx-auto mt-20 ">
-                {/* About This Product */}
-                <section className="my-[60px]">
-                  <h2 className="font-semibold  text-2xl mb-8">
-                    About This Product:
-                  </h2>
-                  <p className="text-black-secondary font-satoshi leading-relaxed">
-                    Building a positive work culture in a young office starts
-                    with fostering an environment of open communication,
-                    flexibility, and growth. Encouraging team members to share
-                    ideas freely promotes a culture of trust and collaboration,
-                    essential for young professionals eager to contribute.
-                  </p>
-                </section>
+            {/* Product Details Section */}
+            <div className="mt-20 ">
+              {/* About This Product */}
+              <section className="my-[60px]">
+                <h2 className="font-semibold  text-2xl mb-8">
+                  About This Product:
+                </h2>
+                <p className="text-black-secondary font-satoshi leading-relaxed">
+                  Building a positive work culture in a young office starts with
+                  fostering an environment of open communication, flexibility,
+                  and growth. Encouraging team members to share ideas freely
+                  promotes a culture of trust and collaboration, essential for
+                  young professionals eager to contribute.
+                </p>
+              </section>
 
-                {/* Product Features */}
-                <section className="my-[60px]">
-                  <h2 className="font-semibold  text-2xl ">
-                    Product Features:
-                  </h2>
-                  <ul>
-                    {[
-                      "Our sub brand logos should exist as all black or all white. The logos should never.",
-                      "different typefaces, or scaled improperly. They should always maintain this integrity.",
-                      "Our photography features the diversity of our customers we want them to see.",
-                      "Our photography features the diversity of our customers we want them to see.",
-                      "Our photography features the diversity of our customers we want them to see.",
-                      "We represent our product functionality in metaphorical and beautiful Another.",
-                      "Your online presence is often the first impression make web development.",
-                    ].map((feature, index) => (
-                      <li key={index} className="flex items-center  space-y-6">
-                        <span className="w-2.5 h-2.5 bg-yellow-primary rotate-45 mr-3 mt-6 block"></span>
-                        <span className="font-satoshi font-medium ">
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
+              {/* Product Features */}
+              <section className="my-[60px]">
+                <h2 className="font-semibold  text-2xl ">Product Features:</h2>
+                <ul>
+                  {[
+                    "Our sub brand logos should exist as all black or all white. The logos should never.",
+                    "different typefaces, or scaled improperly. They should always maintain this integrity.",
+                    "Our photography features the diversity of our customers we want them to see.",
+                    "Our photography features the diversity of our customers we want them to see.",
+                    "Our photography features the diversity of our customers we want them to see.",
+                    "We represent our product functionality in metaphorical and beautiful Another.",
+                    "Your online presence is often the first impression make web development.",
+                  ].map((feature, index) => (
+                    <li key={index} className="flex items-center  space-y-6">
+                      <span className="w-2.5 h-2.5 bg-yellow-primary rotate-45 mr-3 mt-6 block"></span>
+                      <span className="font-satoshi font-medium ">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
 
-                {/* Product Benefits */}
-                <section className="my-[60px]">
-                  <h2 className="font-semibold  text-2xl ">
-                    Product Benefits:
-                  </h2>
-                  <ul>
-                    {[
-                      "Our sub brand logos should exist as all black or all white. The logos should never.",
-                      "We represent our product functionality in metaphorical and beautiful Another.",
-                      "Your online presence is often the first impression make web development.",
-                    ].map((benefit, index) => (
-                      <li key={index} className="flex items-center  space-y-6">
-                        <span className="w-2.5 h-2.5 bg-yellow-primary rotate-45 mr-3 mt-6 block"></span>
-                        <span className="font-satoshi font-medium ">
-                          {benefit}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
+              {/* Product Benefits */}
+              <section className="my-[60px]">
+                <h2 className="font-semibold  text-2xl ">Product Benefits:</h2>
+                <ul>
+                  {[
+                    "Our sub brand logos should exist as all black or all white. The logos should never.",
+                    "We represent our product functionality in metaphorical and beautiful Another.",
+                    "Your online presence is often the first impression make web development.",
+                  ].map((benefit, index) => (
+                    <li key={index} className="flex items-center  space-y-6">
+                      <span className="w-2.5 h-2.5 bg-yellow-primary rotate-45 mr-3 mt-6 block"></span>
+                      <span className="font-satoshi font-medium ">
+                        {benefit}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
 
-                {/* Support */}
-                <section className="my-[60px]">
-                  <h2 className="font-semibold text-2xl ">Support:</h2>
-                  <ul>
-                    {[
-                      "Our sub brand logos should exist as all black or all white. The logos should never.",
-                      "Your online presence is often the first impression make web development.",
-                    ].map((support, index) => (
-                      <li key={index} className="flex items-center  space-y-6">
-                        <span className="w-2.5 h-2.5 bg-yellow-primary rotate-45 mr-3 mt-6 block"></span>
-                        <span className="font-satoshi font-medium ">
-                          {support}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
+              {/* Support */}
+              <section className="my-[60px]">
+                <h2 className="font-semibold text-2xl ">Support:</h2>
+                <ul>
+                  {[
+                    "Our sub brand logos should exist as all black or all white. The logos should never.",
+                    "Your online presence is often the first impression make web development.",
+                  ].map((support, index) => (
+                    <li key={index} className="flex items-center  space-y-6">
+                      <span className="w-2.5 h-2.5 bg-yellow-primary rotate-45 mr-3 mt-6 block"></span>
+                      <span className="font-satoshi font-medium ">
+                        {support}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
 
-                {/* Video Documentation */}
-                <section className="my-[60px]">
-                  <h2 className="font-semibold text-2xl ">
-                    Video Documentation:
-                  </h2>
-                  <p className="font-satoshi text-black-secondary my-8">
-                    You don&apos;t need to worry about editing the template; we
-                    have detailed video documentation and tutorials available.
-                    You can easily change, modify and customize our template as
-                    per your need with the help of these resources.
-                  </p>
-                  <p className="font-satoshi text-black-secondary font-medium">
-                    Check out the video here:{" "}
-                    <a
-                      href="#"
-                      className="font-satoshi text-black font-bold underline "
-                    >
-                      <span>[Video Link]</span>
-                    </a>
-                  </p>
-                </section>
-              </div>
+              {/* Video Documentation */}
+              <section className="my-[60px]">
+                <h2 className="font-semibold text-2xl ">
+                  Video Documentation:
+                </h2>
+                <p className="font-satoshi text-black-secondary my-8">
+                  You don&apos;t need to worry about editing the template; we
+                  have detailed video documentation and tutorials available. You
+                  can easily change, modify and customize our template as per
+                  your need with the help of these resources.
+                </p>
+                <p className="font-satoshi text-black-secondary font-medium">
+                  Check out the video here:{" "}
+                  <a
+                    href="#"
+                    className="font-satoshi text-black font-bold underline "
+                  >
+                    <span>[Video Link]</span>
+                  </a>
+                </p>
+              </section>
             </div>
           </div>
 
           {/* Sidebar */}
-          <aside className="w-full sm:w-[90%] md:w-[75%] lg:w-[460px] h-auto lg:h-[1020px] p-6 sm:p-8 bg-[#F8F8F8] rounded-[20px] pb-10 overflow-hidden mx-auto">
+          <div className="lg:flex-none xl:w-[440px] lg:w-[300px] w-full h-fit p-6 sm:p-8 bg-[#F8F8F8] rounded-[20px] overflow-hidden mx-auto">
             <div className="lg:sticky top-8 h-full flex flex-col justify-between space-y-6">
               <div>
                 {/* Header Section */}
@@ -311,7 +294,7 @@ export default function SingleProductPage() {
                 </ul>
               </div>
             </div>
-          </aside>
+          </div>
         </div>
         <CallToAction />
       </div>

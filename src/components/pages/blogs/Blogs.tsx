@@ -10,7 +10,7 @@ export default function Blogs() {
   const regularPosts = posts.posts.filter((post) => !post.featured);
 
   return (
-    <div className="container mx-auto px-4 py-8 sm:py-12 md:py-16">
+    <div className="container md:mt-20 mt-10">
       {/* Featured Post */}
       {featuredPost && (
         <div className="mb-8 flex justify-center ">
