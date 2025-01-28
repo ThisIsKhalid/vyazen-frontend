@@ -2,13 +2,8 @@ import image1 from "@/assets/images/about-us-img-1.png";
 import image2 from "@/assets/images/about-us-img-2.png";
 import image3 from "@/assets/images/about-us-img-3.png";
 import image4 from "@/assets/images/about-us-img-4.png";
-import teamImg2 from "@/assets/images/team-image-about-us-2.png";
-import teamImg3 from "@/assets/images/team-image-about-us-3.png";
-import teamImg4 from "@/assets/images/team-image-about-us-4.png";
-import teamImg5 from "@/assets/images/team-image-about-us-5.png";
-import teamImg6 from "@/assets/images/team-image-about-us-7.png";
-import teamImg1 from "@/assets/images/team-image-about-us.png";
 import AboutUs from "@/components/shared/AboutUs/AboutUs";
+import TeamGrid from "@/components/shared/AboutUs/TeamGrid";
 import CallToAction from "@/components/shared/CallToAction/CallToAction";
 import FAQ from "@/components/shared/FAQ/FAQ";
 import PageHeader from "@/components/shared/PageHeader/PageHeader";
@@ -17,17 +12,7 @@ import Image from "next/image";
 import React from "react";
 
 export default function AboutUsPage() {
-  // Assign images to members
-  const members = [
-    { name: "Paul Scholes", role: "Visual Designer", image: teamImg1 },
-    { name: "Paul Scholes", role: "Visual Designer", image: teamImg2 },
-    { name: "Paul Scholes", role: "Visual Designer", image: teamImg3 },
-    { name: "Paul Scholes", role: "Visual Designer", image: teamImg4 },
-    { name: "Paul Scholes", role: "Visual Designer", image: teamImg5 },
-    { name: "Paul Scholes", role: "Visual Designer", image: teamImg2 },
-    { name: "Paul Scholes", role: "Visual Designer", image: teamImg6 },
-    { name: "Paul Scholes", role: "Visual Designer", image: teamImg1 },
-  ];
+
   return (
     <div>
       <PageHeader title="About Us" subtitle="About Us" />
@@ -118,66 +103,9 @@ export default function AboutUsPage() {
             </div>
           </div>
 
-          {/* Team Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {members.map((member, index) => (
-              <div
-                key={index}
-                className="group relative overflow-hidden rounded-2xl transition-all border-t-4 shadow-md shadow-slate-800 border-olive-secondary  duration-300 hover:scale-105"
-              >
-                {/* Card Content */}
-                <div
-                  className="relative aspect-[3/4] bg-black/30 backdrop-blur-sm 
-                 transition-colors duration-300 group-hover:bg-yellow-primary   "
-                >
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover opacity-80 group-hover:opacity-0 transition-opacity duration-300 bg-customGradient"
-                  />
+         {/* Team Grid */}
+    <TeamGrid/>
 
-                  {/* Text Overlay */}
-                  <div
-                    className="absolute bottom-0 left-0 right-0 p-4 
-                    group-hover:opacity-0 transition-opacity duration-300"
-                  >
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-75"></div>
-
-                    {/* Text Content */}
-                    <div className="absolute bottom-4 left-4 right-4 bg-white/10 backdrop-blur-xl rounded-lg p-4 text-center">
-                      <h3 className="text-xl font-semibold text-white">
-                        {member.name}
-                      </h3>
-                      <p className="text-sm text-gray-300">{member.role}</p>
-                    </div>
-                  </div>
-
-                  {/* Hover State with Arrow */}
-                  <div
-                    className="absolute inset-0 flex items-center justify-center opacity-0 
-                          group-hover:opacity-100 transition-opacity duration-300"
-                  >
-                    <div className="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center">
-                      <svg
-                        className="w-6 h-6 text-black transform -rotate-45"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
       <FAQ />
