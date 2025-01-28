@@ -29,7 +29,7 @@ export default async function BlogPost({
   return (
     <section>
       <PageHeader title="Blog Details" subtitle="Blog Details" />
-      <div className="container pb-8 md:mt-[140px] sm:mt-[70px] mt-[50px]">
+      <div className="container  md:mt-[140px] sm:mt-[70px] mt-[50px]">
         <div className="flex flex-wrap md:justify-center  lg:flex-nowrap gap-6">
           {/* Main Content */}
           <div className="lg:w-[816px]">
@@ -105,9 +105,9 @@ export default async function BlogPost({
                   to us today!&quot;
                 </p>
                 <p className="text-xl flex items-center gap-2 font-medium">
-                  <span>
-                    <h1 className="w-[30px] h-[1px] bg-black"></h1>
-                  </span>{" "}
+                  
+                    <span className="w-[30px] h-[1px] bg-black"></span>
+                  
                   Darrell Steward
                 </p>
               </blockquote>
@@ -133,14 +133,14 @@ export default async function BlogPost({
                     alt="Thousand Unknown Plants Are Noticed"
                     width={400}
                     height={300}
-                    className="rounded-lg w-full md:w-[48%]"
+                    className="rounded-lg w-full md:w-[45%]"
                   />
                   <Image
                     src={laptopimg}
                     alt="Lonely Valley Teams With Vapour Around Me"
                     width={400}
                     height={300}
-                    className="rounded-lg w-full md:w-[48%]"
+                    className="rounded-lg w-full md:w-[45%]"
                   />
                 </div>
 
@@ -178,38 +178,38 @@ export default async function BlogPost({
                     2 Comments
                   </h2>
                   <div className="space-y-6">
-                    <div className="flex gap-4">
+                    <div className="flex items-center gap-4">
                       <Image
                         src={commentimg1}
                         alt="Kevin Martin"
-                        width={120}
-                        height={120}
-                        className="rounded-full sm:w-24 h-24 flex-shrink-0"
+                        width={80}
+                        height={80}
+                        className="rounded-full "
                       />
                       <div>
-                        <div className="flex items-center gap-2 mb-2">
+                        <div className="flex items-center gap-2 mb-2 font-semibold text-xl">
                           <h3 className="font-semibold">Kevin Martin</h3>
                         </div>
-                        <p className="text-black-secondary md:font-medium text-sm md:text-base font-satoshi">
+                        <p className="text-black-secondary font-satoshi font-medium text-sm md:text-base">
                           &quot;Amazing job on this project! Your attention to
                           detail really shows, and it&apos;s made a big
                           impact.&quot;
                         </p>
                       </div>
                     </div>
-                    <div className="flex gap-4">
+                    <div className="flex items-center gap-4">
                       <Image
                         src={commentimg2}
                         alt="Jacob Jones"
-                        width={120}
-                        height={120}
-                        className="rounded-full sm:w-24 h-24 flex-shrink-0"
+                        width={80}
+                        height={80}
+                        className="rounded-full "
                       />
                       <div>
-                        <div className="flex items-center gap-2 mb-2">
+                        <div className="flex items-center gap-2 mb-2 font-semibold text-xl ">
                           <h3 className="font-semibold">Jacob Jones</h3>
                         </div>
-                        <p className="text-black-secondary md:font-medium text-sm md:text-base font-satoshi">
+                        <p className="text-black-secondary font-satoshi font-medium text-sm md:text-base">
                           &quot;Amazing job on this project! Your attention to
                           detail really shows, and it&apos;s made a big
                           impact.&quot;
@@ -253,7 +253,7 @@ export default async function BlogPost({
           </div>
 
           {/* Sidebar */}
-          <aside className="w-full lg:w-[456px] p-8 bg-[#F8F8F8] rounded-[20px]">
+          <aside className="w-full lg:w-[456px]  p-8 bg-[#F8F8F8] rounded-[20px]">
             <div className="sticky top-8 space-y-12">
               {/* Search Box */}
               <div className="relative mb-8">
@@ -325,8 +325,8 @@ export default async function BlogPost({
                 </div>
               </section>
               {/* Categories */}
-              <section>
-                <h2 className="font-semibold text-black md:text-[28px] text-2xl mb-8">
+              <section >
+                <h2 className="font-semibold  text-black md:text-[28px] text-2xl mb-4  ">
                   Categories
                 </h2>
                 <ol className="space-y-2 list-item list-disc ">
@@ -355,9 +355,9 @@ export default async function BlogPost({
               </section>
 
               {/* Tags */}
-              <section>
-                <h2 className="text-xl font-bold mb-6">Tags</h2>
-                <div className="flex flex-wrap gap-3">
+              <section className="text-center">
+                <h2 className="text-xl font-bold mb-6 ">Tags</h2>
+                <div className="flex flex-wrap gap-2 justify-center items-center">
                   <span className="px-4 py-2 bg-white font-medium font-satoshi text-black-secondary rounded-[10px] ">
                     Branding
                   </span>
