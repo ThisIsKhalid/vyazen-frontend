@@ -53,8 +53,8 @@ const TeamGrid = () => {
 
           {/* Hover State with Arrow Icon */}
           <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h3 className="text-black text-xl font-semibold">{member.name}</h3>
-            <p className="text-black text-sm">{member.role}</p>
+            <h3 className="text-white text-xl font-semibold">{member.name}</h3>
+            <p className="text-white text-sm">{member.role}</p>
 
             {/* Circular Arrow Button */}
             <div className="mt-4 w-[88px] h-[88px] bg-black/80  rounded-full flex items-center justify-center shadow-md hover:bg-black/90 transition">

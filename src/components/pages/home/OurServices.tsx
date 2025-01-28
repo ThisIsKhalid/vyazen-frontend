@@ -3,6 +3,7 @@ import SectionHeader from "@/components/shared/SectionHeader/SectionHeader";
 import Image from "next/image";
 import { useState } from "react";
 
+
 export default function Accordion() {
   const [activeSection, setActiveSection] = useState<number | null>(null);
 
@@ -20,7 +21,7 @@ export default function Accordion() {
       title: "UI/UX Design",
       tags: ["UI/UX", "Webflow", "Envato"],
       imageUrl:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/our-service%20image-1VQ2ML3OIsWLbnXkTBNohAB0Ux80R3.png",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/our-service%20image-1VQ2ML3OIsWLbnXkTBNohAB0Ux80R3.png",
     },
     {
       id: 2,
