@@ -106,7 +106,7 @@ export default async function BlogPost({
                 </p>
                 <p className="text-xl flex items-center gap-2 font-medium">
                   <span>
-                    <div className="w-[30px] h-[1px] bg-black"></div>
+                    <h1 className="w-[30px] h-[1px] bg-black"></h1>
                   </span>{" "}
                   Darrell Steward
                 </p>
