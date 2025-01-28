@@ -87,15 +87,12 @@ export default function SingleProductPage() {
                       className="rounded-lg md:h-[518px] w-full object-cover"
                     />
                   </SwiperSlide>
-                  
+                
                 </Swiper>
 
                 <style jsx global>{`
                   /* Pagination Container */
                   .swiper-pagination {
-                    width: 120px; /* Set width to 120px */
-                    height: 38px;
-                    justify-content: center;
                     background: linear-gradient(
                       to right,
                       #b0b0b0,
@@ -105,6 +102,7 @@ export default function SingleProductPage() {
                     border-radius: 20px;
                     display: inline-flex;
                     align-items: center;
+                    justify-content:center;
                   }
 
                   /* Pagination Bullets */
