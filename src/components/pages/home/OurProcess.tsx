@@ -8,6 +8,7 @@ import InfoCard from "./InfoCard";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import { Autoplay } from "swiper/modules";
 
 const OurProcess = () => {
   return (
@@ -35,7 +36,7 @@ const OurProcess = () => {
           }
         />
 
-        <div className="mt-24">
+        <div className="mt-24 overflow-hidden">
           <Swiper
             slidesPerView={1}
             spaceBetween={20}
@@ -54,7 +55,11 @@ const OurProcess = () => {
                 spaceBetween: 30,
               },
             }}
-            modules={[]}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            modules={[Autoplay]}
           >
             <SwiperSlide>
               <InfoCard />

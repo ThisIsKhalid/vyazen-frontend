@@ -51,6 +51,6 @@
 }
 
 
-.swiper .swiper-slide {
-  overflow: visible;
+.swiper {
+  overflow: visible !important;
 }
