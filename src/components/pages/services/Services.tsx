@@ -14,21 +14,21 @@ import graphicsDesign from "@/assets/images/ux-ui-design.png";
 export default function Services() {
   return (
     <div className="max-w-[1296px] mx-auto flex flex-wrap gap-6 md:gap-8 justify-center">
-      {/* Card 1 - UX/UI Design */}
-      <div className="bg-[#F8F8F8] max-w-[636px] h-auto sm:h-[380px] rounded-xl shadow-lg flex flex-col sm:flex-row items-center flex-[1_1_100%] sm:flex-[1_1_48%] md:flex-[1_1_30%]">
+   {/* Card 2 - Web Development */}
+   <div className="bg-[#F8F8F8] max-w-[636px] h-auto sm:h-[380px] rounded-xl shadow-lg flex flex-col sm:flex-row items-center flex-[1_1_100%] sm:flex-[1_1_48%] md:flex-[1_1_30%] ">
         <div className="flex flex-col flex-1 px-4 sm:px-6 py-4 space-y-4">
           <div className="bg-gray-100 p-2 w-10 h-10 border-2 border-black flex items-center justify-center rounded-xl">
-            <span className="text-sm font-medium">UX</span>
+            <span className="text-sm font-medium">AD</span>
           </div>
-          <h3 className="text-lg sm:text-2xl font-semibold">UX/UI Design</h3>
+          <h3 className="text-lg sm:text-2xl md:mr-10 font-semibold">UX/UI Design</h3>
           <p className="text-black-secondary text-sm sm:text-base font-medium">
-            Our UI/UX design services ensure your digital products offer
-            seamless user experience.
+            Create robust and scalable mobile applications tailored to your
+            business needs.
           </p>
           <div className="border-b"></div>
           <div>
             <Link
-              href={`/our-services/ux-ui-design`}
+              href={`/our-services/app-development`}
               className="inline-flex items-center font-bold hover:underline w-fit group"
             >
               View Details
@@ -39,7 +39,7 @@ export default function Services() {
         <div className="mt-4 sm:mt-0 sm:ml-6">
           <Image
             src={uxImage}
-            alt="UX/UI Design"
+            alt="App Development"
             width={268}
             height={380}
             className="rounded-lg object-cover w-full sm:w-auto h-auto sm:h-[380px]"
@@ -47,23 +47,21 @@ export default function Services() {
         </div>
       </div>
 
-      {/* Card 2 - Digital Marketing */}
+ {/* Card 2 - Web Development */}
       <div className="bg-[#F8F8F8] max-w-[636px] h-auto sm:h-[380px] rounded-xl shadow-lg flex flex-col sm:flex-row items-center flex-[1_1_100%] sm:flex-[1_1_48%] md:flex-[1_1_30%]">
         <div className="flex flex-col flex-1 px-4 sm:px-6 py-4 space-y-4">
           <div className="bg-gray-100 p-2 w-10 h-10 border-2 border-black flex items-center justify-center rounded-xl">
-            <span className="text-sm font-medium">DM</span>
+            <span className="text-sm font-medium">AD</span>
           </div>
-          <h3 className="text-lg sm:text-2xl font-semibold">
-            Digital Marketing
-          </h3>
+          <h3 className="text-lg sm:text-2xl font-semibold">Web Development</h3>
           <p className="text-black-secondary text-sm sm:text-base font-medium">
-            Unlock the power of digital marketing to grow your business and
-            connect with your audience.
+            Create robust and scalable mobile applications tailored to your
+            business needs.
           </p>
           <div className="border-b"></div>
           <div>
             <Link
-              href={`/our-services/digital-marketing`}
+              href={`/our-services/app-development`}
               className="inline-flex items-center font-bold hover:underline w-fit group"
             >
               View Details
@@ -74,7 +72,7 @@ export default function Services() {
         <div className="mt-4 sm:mt-0 sm:ml-6">
           <Image
             src={webDevImage}
-            alt="Digital Marketing"
+            alt="App Development"
             width={268}
             height={380}
             className="rounded-lg object-cover w-full sm:w-auto h-auto sm:h-[380px]"
@@ -83,8 +81,8 @@ export default function Services() {
       </div>
 
       {/* Card 3 - Branding & Identity */}
-      <div className="bg-[#F8F8F8] rounded-xl h-auto sm:h-[380px] shadow-lg flex flex-col sm:flex-row items-center flex-[1_1_100%] max-w-full">
-        <div className="flex flex-col flex-1 px-4 sm:px-6 py-4 space-y-4">
+      <div className="bg-[#F8F8F8] rounded-xl h-auto sm:h-[380px] shadow-lg flex flex-col  sm:flex-row items-center flex-[1_1_100%] max-w-full">
+        <div className="flex flex-col lg:flex-1 px-4 sm:px-6 py-4 space-y-4">
           <div className="bg-gray-100 p-2 w-10 h-10 border-2 border-black flex items-center justify-center rounded-xl">
             <span className="text-sm font-medium">BI</span>
           </div>
@@ -123,7 +121,7 @@ export default function Services() {
           <div className="bg-gray-100 p-2 w-10 h-10 border-2 border-black flex items-center justify-center rounded-xl">
             <span className="text-sm font-medium">AD</span>
           </div>
-          <h3 className="text-lg sm:text-2xl font-semibold">App Development</h3>
+          <h3 className="text-lg sm:text-2xl font-semibold">App development</h3>
           <p className="text-black-secondary text-sm sm:text-base font-medium">
             Create robust and scalable mobile applications tailored to your
             business needs.
@@ -155,7 +153,7 @@ export default function Services() {
           <div className="bg-gray-100 p-2 w-10 h-10 border-2 border-black flex items-center justify-center rounded-xl">
             <span className="text-sm font-medium">AD</span>
           </div>
-          <h3 className="text-lg sm:text-2xl font-semibold">App Development</h3>
+          <h3 className="text-lg sm:text-2xl font-semibold">Digital Marketing</h3>
           <p className="text-black-secondary text-sm sm:text-base font-medium">
             Create robust and scalable mobile applications tailored to your
             business needs.
@@ -183,12 +181,12 @@ export default function Services() {
       </div>
       {/* Card 6 - Branding & Identity */}
       <div className="bg-[#F8F8F8] rounded-xl h-auto sm:h-[380px] shadow-lg flex flex-col sm:flex-row items-center flex-[1_1_100%] max-w-full">
-        <div className="flex flex-col flex-1 px-4 sm:px-6 py-4 space-y-4">
+        <div className="flex flex-col lg:flex-1 px-4 sm:px-6 py-4 space-y-4">
           <div className="bg-gray-100 p-2 w-10 h-10 border-2 border-black flex items-center justify-center rounded-xl">
             <span className="text-sm font-medium">BI</span>
           </div>
           <h3 className="text-lg sm:text-2xl font-semibold">
-            Branding & Identity
+          Motion Graphics & Production
           </h3>
           <p className="text-black-secondary text-sm sm:text-base font-medium">
             Build a strong brand identity that resonates with your customers and
@@ -221,7 +219,7 @@ export default function Services() {
           <div className="bg-gray-100 p-2 w-10 h-10 border-2 border-black flex items-center justify-center rounded-xl">
             <span className="text-sm font-medium">AD</span>
           </div>
-          <h3 className="text-lg sm:text-2xl font-semibold">App Development</h3>
+          <h3 className="text-lg sm:text-2xl font-semibold">Product Design</h3>
           <p className="text-black-secondary text-sm sm:text-base font-medium">
             Create robust and scalable mobile applications tailored to your
             business needs.
@@ -253,7 +251,7 @@ export default function Services() {
           <div className="bg-gray-100 p-2 w-10 h-10 border-2 border-black flex items-center justify-center rounded-xl">
             <span className="text-sm font-medium">AD</span>
           </div>
-          <h3 className="text-lg sm:text-2xl font-semibold">App Development</h3>
+          <h3 className="text-lg sm:text-2xl font-semibold">Graphics Design</h3>
           <p className="text-black-secondary text-sm sm:text-base font-medium">
             Create robust and scalable mobile applications tailored to your
             business needs.

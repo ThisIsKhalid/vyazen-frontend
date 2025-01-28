@@ -24,7 +24,7 @@ export default function OurServicesPage() {
           align="center"
         />
       </div>
-      <div className="md:mt-[80px] sm:mt-[70px] mt-[50px]">
+      <div className="md:mt-[80px]  mt-[50px]">
         <Services />
       </div>
       <FAQ />
