@@ -1,14 +1,17 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import SectionHeader from "@/components/shared/SectionHeader/SectionHeader";
 import Image from "next/image";
 import { useState } from "react";
 
 export default function Accordion() {
-  const [activeSection, setActiveSection] = useState(null);
+  const [activeSection, setActiveSection] = useState<number | null>(null);
 
-  const toggleSection = (index: any) => {
-    setActiveSection(activeSection === index ? null : index);
+  const handleMouseEnter = (index: number) => {
+    setActiveSection(index);
+  };
+
+  const handleMouseLeave = () => {
+    setActiveSection(null);
   };
 
   const sections = [
@@ -63,9 +66,11 @@ export default function Accordion() {
               <div
                 key={section.id}
                 className="border-t border-white/10 pt-6 sm:pt-8 group"
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={handleMouseLeave}
               >
-                <div className="flex flex-col sm:flex-row items-start  sm:items-center gap-4 sm:gap-6">
-                  <span className="text-white/60 font-light text-sm  sm:text-base">{`0${section.id}`}</span>
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+                  <span className="text-white/60 font-light text-sm sm:text-base">{`0${section.id}`}</span>
                   <div className="flex-1">
                     <div className="flex flex-col sm:flex-row justify-between">
                       <h3
@@ -73,16 +78,15 @@ export default function Accordion() {
                           activeSection === index
                             ? "text-white"
                             : "text-[#FFFFFF66]"
-                        } transition-colors mb-2 sm:mb-4 cursor-pointer`}
-                        onClick={() => toggleSection(index)}
+                        } transition-all duration-700 ease-out mb-2 sm:mb-4 cursor-pointer`}
                       >
                         {section.title}
                       </h3>
-                      <div className="flex  gap-2 mt-2">
+                      <div className="flex gap-2 mt-2">
                         {section.tags.map((tag, idx) => (
                           <span
                             key={idx}
-                            className={`text-xs sm:text-sm cursor-pointer transition-colors ${
+                            className={`text-xs sm:text-sm cursor-pointer transition-all duration-300 ease-in-out ${
                               activeSection === index
                                 ? "text-white"
                                 : "text-white/60"
