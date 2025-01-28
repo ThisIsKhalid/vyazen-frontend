@@ -1,16 +1,9 @@
-
 import ProductCard from "@/components/shared/ProductCard/ProductCard";
 import SectionHeader from "@/components/shared/SectionHeader/SectionHeader";
 
 import React from "react";
-import { FiChevronDown, FiSearch } from "react-icons/fi";
-
-const filterOptions = [
-  { label: "Category", icon: "/category-icon.png", options: ["Test 1", "Test 2", "Test 3"] },
-  { label: "Color Type", icon: "/color-icon.png", options: ["Test 1", "Test 2", "Test 3"]},
-  { label: "Featured", icon: "/featured-icon.png", options: ["Test 1", "Test 2", "Test 3"] },
-];
-
+import { FiSearch } from "react-icons/fi";
+import FilterComponent from "./FilterComponent";
 
 const OurProducts = () => {
   return (
@@ -29,8 +22,8 @@ const OurProducts = () => {
 
       {/* content */}
       <div className="flex flex-col md:flex-row md:mt-20 mt-10 gap-14">
-      <div className="space-y-6">
-     {/* Search Bar */}
+        <div className="space-y-6">
+          {/* Search Bar */}
           <div className="relative">
             <input
               type="text"
@@ -44,31 +37,9 @@ const OurProducts = () => {
             </button>
           </div>
 
-      {/*  Filters */}
-      <div className="space-y-4">
-      {filterOptions.map((filter, index) => (
-        <details key={index} className="relative bg-[#F8F8F8] px-6 py-4 rounded-full cursor-pointer group">
-          <summary className="flex items-center justify-between list-none">
-            <div className="flex items-center gap-3">
-              {/* Dynamic Icon (optional) */}
-              
-              <span className="font-satoshi text-lg font-medium">{filter.label}</span>
-            </div>
-            <FiChevronDown className="w-6 h-6 text-black group-open:rotate-180 transition-transform duration-300" />
-          </summary>
-
-          {/* Dropdown Content */}
-          <div className="absolute top-full left-0 w-full bg-white shadow-lg rounded-lg py-2 z-10 hidden group-open:block">
-            {filter.options.map((option, idx) => (
-              <div key={idx} className="px-6 py-3 hover:bg-gray-200 cursor-pointer transition">
-                {option}
-              </div>
-            ))}
-          </div>
-        </details>
-      ))}
-    </div>
-    </div>
+          {/*  Filters */}
+          <FilterComponent />
+        </div>
 
         {/* Product Cards Section */}
         <div className="md:flex-1 grid grid-cols-1 xl:grid-cols-2 gap-6">
