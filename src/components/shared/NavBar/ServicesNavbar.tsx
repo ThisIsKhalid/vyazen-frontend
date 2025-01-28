@@ -17,7 +17,7 @@ const ServicesNavbar = () => {
       description:
         "Our UI/UX design services ensure your digital products offer seamless user experiences.",
       icon: ux,
-      link: "/services/ux-ui-design",
+      link: "/our-services/ux-ui-design",
     },
     {
       title: "Branding & Identity",
