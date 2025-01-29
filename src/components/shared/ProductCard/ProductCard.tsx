@@ -38,7 +38,7 @@ const ProductCard = () => {
           </p>
           <Link
             href="/our-products/some-product"
-            className="flex items-center gap-2 font-satoshi font-bold text-[18px] leading-[42px] text-black"
+            className="flex items-center gap-2 font-satoshi font-bold text-[18px] leading-[42px] text-black hover:text-yellow-500 transition-colors duration-300 ease-in-out"
           >
             PREVIEW
             <MdOutlineArrowOutward className="font-bold text-2xl" />

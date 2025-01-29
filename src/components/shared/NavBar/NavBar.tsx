@@ -1,6 +1,6 @@
 "use client";
 
-import navLogo from "@/assets/images/nav-logo.png";
+import navLogo from "@/assets/icons/VyazenLogo.svg";
 import cn from "@/lib/cn";
 import Image from "next/image";
 import Link from "next/link";
@@ -107,7 +107,7 @@ const NavBar = () => {
           </ul>
 
           <button className="hidden md:flex w-[192px] h-[52px] py-3 px-8 border border-yellow-primary rounded-full text-yellow-primary hover:bg-yellow-primary hover:text-black opacity-100 transition duration-300 text-nowrap">
-            Get Started Here
+            Let&apos;s Talk
           </button>
 
           {/* Mobile Menu Icon */}

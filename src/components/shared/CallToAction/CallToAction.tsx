@@ -1,5 +1,6 @@
 import ctaEmail from "@/assets/images/cta-email.png";
 import ctaEqual from "@/assets/images/cta-equal.png";
+import ctavector from "@/assets/images/cta-vector.png";
 import ctaWp from "@/assets/images/cta-wp.png";
 import Image from "next/image";
 import React from "react";
@@ -12,10 +13,10 @@ const CallToAction = () => {
         <div className="absolute  md:top-1/2 top-14 lg:left-32 md:left-10 left-3 -translate-y-1/2">
           <Image src={ctaEqual} alt="CTA Icon" width={55} height={55} />
         </div>
-        <div className="absolute md:bottom-20 bottom-2 right-5 lg:right-32">
+        <div className="absolute md:bottom-20 bottom-2 right-5 lg:right-48">
           <Image src={ctaEmail} alt="CTA Email" width={55} height={55} />
         </div>
-        <div className="absolute md:top-20 top-14 right-3">
+        <div className="absolute md:top-20 top-14 md:right-24 right-3">
           <Image src={ctaWp} alt="CTA WhatsApp" width={55} height={55} />
         </div>
 
@@ -34,6 +35,17 @@ const CallToAction = () => {
           <button className=" bg-yellow-primary text-black px-[33px] py-[12px] hover:bg-yellow-400 transition text-lg font-semibold rounded-full text-nowrap">
             Schedule A Call
           </button>
+        </div>
+
+        {/* Vector */}
+        <div className="absolute bottom-0 right-0 z-30 w-full">
+          <Image
+            src={ctavector}
+            alt="CTA Vector"
+            width={1000}
+            height={1000}
+            className="w-full"
+          />
         </div>
       </div>
     </section>

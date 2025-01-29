@@ -1,5 +1,5 @@
+import navLogo from "@/assets/icons/VyazenLogo.svg";
 import vectorImg from "@/assets/images/footer-vector.png";
-import navLogo from "@/assets/images/nav-logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

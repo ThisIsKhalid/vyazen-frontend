@@ -1,5 +1,6 @@
 import vector from "@/assets/images/home-banner-vector.png";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -33,9 +34,12 @@ export default function HeroSection() {
 
           {/* Contact Button */}
           <div className="md:mt-[52px] mt-10">
-            <button className="bg-yellow-primary text-black px-10 py-4 rounded-full hover:bg-yellow-400 transition font-bold text-base font-satoshi">
-              Contact With Us
-            </button>
+            <Link
+              href="/our-products"
+              className="bg-yellow-primary text-black px-10 py-4 rounded-full hover:bg-yellow-400 transition font-bold text-base font-satoshi"
+            >
+              Explore Products
+            </Link>
           </div>
         </div>
 
