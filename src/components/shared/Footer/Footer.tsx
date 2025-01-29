@@ -1,5 +1,5 @@
+import navLogo from "@/assets/icons/VyazenLogo.svg";
 import vectorImg from "@/assets/images/footer-vector.png";
-import navLogo from "@/assets/images/nav-logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -85,9 +85,12 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <a href="#privacy" className="hover:text-yellow-primary">
+              <Link
+                href="/privacy-policy"
+                className="hover:text-yellow-primary"
+              >
                 Privacy Policy
-              </a>
+              </Link>
             </li>
             <li>
               <Link href="/contact-us" className="hover:text-yellow-primary">
