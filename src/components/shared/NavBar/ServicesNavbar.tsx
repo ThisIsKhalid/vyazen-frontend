@@ -99,6 +99,15 @@ const ServicesNavbar = () => {
           </Link>
         ))}
       </div>
+      {/* view more button */}
+      <div className="flex items-center justify-center mt-6">
+        <Link
+          href="/our-services"
+          className="border border-yellow-primary text-black font-semibold text-lg px-5 py-2 rounded-xl hover:bg-yellow-primary transition-all duration-300 ease-in-out"
+        >
+          View More
+        </Link>
+      </div>
     </div>
   );
 };

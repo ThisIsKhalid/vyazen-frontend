@@ -118,7 +118,7 @@ export default function Accordion() {
                     </div>
                     <div className="mt-4 overflow-hidden">
                       <div
-                        className={`transition-all duration-700 ease-in-out ${
+                        className={`transition-all duration-[1500ms] delay-75 ease-in-out ${
                           activeSection === index
                             ? "max-h-[1000px] opacity-100"
                             : "max-h-0 opacity-0"
