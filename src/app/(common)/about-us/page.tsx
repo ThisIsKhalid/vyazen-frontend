@@ -33,7 +33,10 @@ export default function AboutUsPage() {
       <div className="container mx-auto py-12">
         <div className="flex flex-col md:flex-row gap-4">
           {/* Image 1 */}
-          <div className="relative overflow-hidden rounded-lg flex-1">
+          <div
+            className="relative overflow-hidden rounded-lg flex-1"
+            data-aos="zoom-in-up"
+          >
             <Image
               src={image1}
               alt="Open office workspace"
@@ -45,7 +48,10 @@ export default function AboutUsPage() {
           </div>
 
           {/* Image 2 */}
-          <div className="relative flex items-center overflow-hidden rounded-lg flex-1">
+          <div
+            className="relative flex items-center overflow-hidden rounded-lg flex-1"
+            data-aos="zoom-in-up"
+          >
             <Image
               src={image2}
               alt="Modern seating area"
@@ -57,7 +63,10 @@ export default function AboutUsPage() {
           </div>
 
           {/* Image 3 */}
-          <div className="relative overflow-hidden rounded-lg flex-1">
+          <div
+            className="relative overflow-hidden rounded-lg flex-1"
+            data-aos="zoom-in-up"
+          >
             <Image
               src={image3}
               alt="Casual meeting space"
@@ -69,7 +78,10 @@ export default function AboutUsPage() {
           </div>
 
           {/* Image 4 */}
-          <div className="relative flex items-center overflow-hidden rounded-lg flex-1">
+          <div
+            className="relative flex items-center overflow-hidden rounded-lg flex-1"
+            data-aos="zoom-in-up"
+          >
             <Image
               src={image4}
               alt="Modern architecture"

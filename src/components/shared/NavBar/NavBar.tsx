@@ -14,16 +14,17 @@ const NavBar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [showServices, setShowServices] = useState(false);
   const [showProducts, setShowProducts] = useState(false);
+  console.log(showProducts);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
   return (
-    <>
+    <section className="relative">
       {/* Navbar */}
       <nav className="bg-customGradient text-white border-b border-white/10">
-        <section className="container py-6 flex justify-between items-center ">
+        <section className="container  flex justify-between items-center ">
           <Link
             href="/"
             className="flex items-center"
@@ -57,56 +58,80 @@ const NavBar = () => {
               </Link>
             </li>
             <li
-              className="relative group"
+              className="relative group py-8"
               onMouseEnter={() => {
                 setShowProducts(true);
                 setShowServices(false);
               }}
+              onMouseLeave={() => setShowProducts(false)}
               onClick={() => setShowProducts(!showProducts)}
             >
-              <Link
-                href="/our-products"
+              <p
                 className={cn(
-                  "text-base leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out  flex items-center",
+                  "text-base leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out  flex items-center cursor-pointer",
                   {
                     "text-yellow-primary": showProducts,
                   }
                 )}
               >
                 Products <FaPlus className="ml-1 text-xs" />
-              </Link>
+              </p>
+
+              {/* ProductsNavbar */}
+
+              <div
+                className={`absolute w-[500px] z-50 top-20 left-1/2 -translate-x-1/2 transition-all duration-300 ease-in-out ${
+                  showProducts
+                    ? "opacity-100 scale-100 translate-y-0"
+                    : "opacity-0 scale-95 translate-y-5 pointer-events-none"
+                }`}
+              >
+                <ProductsNavbar />
+              </div>
             </li>
             <li
-              className="relative group"
+              className="relative group py-8"
               onMouseEnter={() => {
                 setShowServices(true);
                 setShowProducts(false);
               }}
+              onMouseLeave={() => setShowServices(false)}
               onClick={() => setShowServices(!showServices)}
             >
-              <Link
-                href="/our-services"
+              <p
                 className={cn(
-                  "text-base leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out  flex items-center",
+                  "text-base leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out flex items-center cursor-pointer",
                   {
                     "text-yellow-primary": showServices,
                   }
                 )}
               >
                 Services <FaPlus className="ml-1 text-xs" />
-              </Link>
+              </p>
+
+              {/* ServicesNavbar with Smooth Animation */}
+              <div
+                className={`absolute w-[1040px] z-50 top-20 left-1/2 -translate-x-1/2 transition-all duration-300 ease-in-out ${
+                  showServices
+                    ? "opacity-100 scale-100 translate-y-0"
+                    : "opacity-0 scale-95 translate-y-5 pointer-events-none"
+                }`}
+              >
+                <ServicesNavbar />
+              </div>
             </li>
+
             <li>
               <Link
-                href="/our-blogs"
+                href="/contact-us"
                 className="text-base leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out "
               >
-                Blogs
+                Contact Us
               </Link>
             </li>
           </ul>
 
-          <button className="hidden md:flex w-[192px] h-[52px] py-3 px-8 border border-yellow-primary rounded-full text-yellow-primary hover:bg-yellow-primary hover:text-black opacity-100 transition duration-300 text-nowrap">
+          <button className="hidden md:flex  py-3 px-12 border border-yellow-primary rounded-full text-yellow-primary hover:bg-yellow-primary hover:text-black opacity-100 transition duration-300 text-nowrap">
             Let&apos;s Talk
           </button>
 
@@ -117,26 +142,6 @@ const NavBar = () => {
           </button>
         </section>
       </nav>
-
-      {/* SErvicesNavbar */}
-      {showServices && (
-        <div
-          className="absolute container w-full flex items-center justify-center z-50"
-          onClick={() => setShowServices(false)}
-        >
-          <ServicesNavbar />
-        </div>
-      )}
-
-      {/* ProductsNavbar */}
-      {showProducts && (
-        <div
-          className="absolute container w-full flex items-center justify-center z-50"
-          onClick={() => setShowProducts(false)}
-        >
-          <ProductsNavbar />
-        </div>
-      )}
 
       {/* Sidebar for Mobile */}
       <div
@@ -211,7 +216,7 @@ const NavBar = () => {
           </button>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

@@ -15,7 +15,10 @@ import { PiMapPinAreaFill } from "react-icons/pi";
 
 const Footer = () => {
   return (
-    <footer className=" bg-customGradient text-white overflow-hidden md:mt-[140px] sm:mt-[70px] mt-[50px]">
+    <footer
+      className=" bg-customGradient text-white overflow-hidden md:mt-[140px] sm:mt-[70px] mt-[50px]"
+      data-aos="fade-up"
+    >
       <div className="container py-28 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
         {/* Logo and Address */}
         <div className="lg:col-span-2">
@@ -71,7 +74,7 @@ const Footer = () => {
         {/* Useful Links Column 1 */}
         <div>
           <h3 className="text-2xl font-semibold leading-6 mb-8">
-            Useful Links
+            Useful Pages
           </h3>
           <ul className="flex flex-col gap-y-4 text-base font-satoshi font-medium">
             <li>
@@ -80,16 +83,13 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="our-services" className="hover:text-yellow-primary">
+              <Link href="/our-services" className="hover:text-yellow-primary">
                 Our Services
               </Link>
             </li>
             <li>
-              <Link
-                href="/privacy-policy"
-                className="hover:text-yellow-primary"
-              >
-                Privacy Policy
+              <Link href="/our-products" className="hover:text-yellow-primary">
+                Our Products
               </Link>
             </li>
             <li>
@@ -107,13 +107,16 @@ const Footer = () => {
           </h3>
           <ul className="flex flex-col gap-y-4 text-base font-satoshi font-medium">
             <li>
-              <Link href="/about-us" className="hover:text-yellow-primary">
-                About Us
+              <Link href="/our-blogs" className="hover:text-yellow-primary">
+                Blogs
               </Link>
             </li>
             <li>
-              <Link href="our-services" className="hover:text-yellow-primary">
-                Our Services
+              <Link
+                href="/privacy-policy"
+                className="hover:text-yellow-primary"
+              >
+                Privacy Policy
               </Link>
             </li>
             <li>
@@ -122,11 +125,6 @@ const Footer = () => {
                 className="hover:text-yellow-primary"
               >
                 Terms & Conditons
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact-us" className="hover:text-yellow-primary">
-                Contact Us
               </Link>
             </li>
           </ul>
@@ -142,17 +140,27 @@ const Footer = () => {
               </span>
               55 Main St W, Grimsby, Ontario
             </li>
-            <li className="flex items-center">
-              <span className="mr-2 text-yellow-primary">
-                <MdOutlineEmail className="text-2xl" />
-              </span>
-              launchsaudi@gmail.com
+            <li>
+              <a
+                className="flex items-center cursor-pointer"
+                href="mailto:launchsaudi@gmail.com"
+              >
+                <span className="mr-2 text-yellow-primary">
+                  <MdOutlineEmail className="text-2xl" />
+                </span>
+                launchsaudi@gmail.com
+              </a>
             </li>
-            <li className="flex items-center">
-              <span className="mr-2 text-yellow-primary">
-                <LuPhoneCall className="text-2xl" />
-              </span>
-              +880 (217) 555-0113
+            <li>
+              <a
+                className="flex items-center cursor-pointer"
+                href="phone:+88015550113"
+              >
+                <span className="mr-2 text-yellow-primary">
+                  <LuPhoneCall className="text-2xl" />
+                </span>
+                +880 (217) 555-0113
+              </a>
             </li>
           </ul>
         </div>

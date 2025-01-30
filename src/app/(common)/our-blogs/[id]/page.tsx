@@ -34,7 +34,7 @@ export default async function BlogPost({
           {/* Main Content */}
           <div className="lg:w-[816px]">
             <div className="flex-1 w-full  ">
-              <div>
+              <div data-aos="zoom-in-up">
                 <Image
                   src={postimg}
                   alt={post.authorName}
@@ -45,7 +45,10 @@ export default async function BlogPost({
               </div>
 
               {/* Author Info */}
-              <div className="flex flex-col md:flex-row  justify-between items-center mt-10 mb-5">
+              <div
+                className="flex flex-col md:flex-row  justify-between items-center mt-10 mb-5"
+                data-aos="fade-up"
+              >
                 <div className="flex items-center gap-4">
                   <Image
                     src={authorimg}
@@ -69,23 +72,32 @@ export default async function BlogPost({
                   <span>{post.date}</span>
                 </div>
               </div>
-              <div className="border-b mb-10"></div>
+              <div className="border-b mb-10" data-aos="fade-up"></div>
 
               {/* Article Title */}
-              <h1 className="text-2xl md:text-4xl md:w-[591px] font-semibold mb-6">
+              <h1
+                className="text-2xl md:text-4xl md:w-[591px] font-semibold mb-6"
+                data-aos="fade-up"
+              >
                 {post.title}
               </h1>
 
               {/* Article Content */}
               <div className="prose max-w-none  mb-8">
-                <p className="text-gray-600 text-base leading-relaxed">
+                <p
+                  className="text-gray-600 text-base leading-relaxed"
+                  data-aos="fade-up"
+                >
                   Building a positive work culture in a young office starts with
                   fostering an environment of open communication, flexibility,
                   and growth. Encouraging team members to share ideas freely
                   promotes a culture of trust and collaboration, essential for
                   young professionals eager to contribute.
                 </p>
-                <p className="text-gray-600 text-base leading-relaxed mt-4">
+                <p
+                  className="text-gray-600 text-base leading-relaxed mt-4"
+                  data-aos="fade-up"
+                >
                   Creating a thriving work culture in a young office revolves
                   around openness, growth, and purpose. Embracing flexibility,
                   such as remote work options and adaptable hours, respects
@@ -94,7 +106,10 @@ export default async function BlogPost({
               </div>
 
               {/* Quote Section */}
-              <blockquote className="bg-yellow-primary font-satoshi p-6 my-8 rounded-lg">
+              <blockquote
+                className="bg-yellow-primary font-satoshi p-6 my-8 rounded-lg"
+                data-aos="fade-up"
+              >
                 <p className="md:text-[22px] font-medium mb-4">
                   &quot;At Vyazen, we’re passionate about turning your ideas
                   into impactful digital solutions. Whether you’re looking to
@@ -105,16 +120,14 @@ export default async function BlogPost({
                   to us today!&quot;
                 </p>
                 <p className="text-xl flex items-center gap-2 font-medium">
-                  
-                    <span className="w-[30px] h-[1px] bg-black"></span>
-                  
+                  <span className="w-[30px] h-[1px] bg-black"></span>
                   Darrell Steward
                 </p>
               </blockquote>
 
               {/* Additional Sections and Comments */}
               <div className="md:max-w-screen-lg mx-auto my-8">
-                <div className="space-y-4">
+                <div className="space-y-4" data-aos="fade-up">
                   <h1 className="lg:text-[32px] text-2xl font-semibold text-black">
                     Thousand Unknown Plants Are Noticed.
                   </h1>
@@ -134,6 +147,7 @@ export default async function BlogPost({
                     width={400}
                     height={300}
                     className="rounded-lg w-full md:w-[45%]"
+                    data-aos="fade-up"
                   />
                   <Image
                     src={laptopimg}
@@ -141,10 +155,11 @@ export default async function BlogPost({
                     width={400}
                     height={300}
                     className="rounded-lg w-full md:w-[45%]"
+                    data-aos="fade-up"
                   />
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-4" data-aos="fade-up">
                   <h1 className="md:text-[32px] text-xl font-semibold text-black">
                     Lovely valley teems with vapour around me.
                   </h1>
@@ -155,7 +170,10 @@ export default async function BlogPost({
                 </div>
 
                 {/* Share Section */}
-                <div className="flex items-center space-x-4 mt-4">
+                <div
+                  className="flex items-center space-x-4 mt-4"
+                  data-aos="fade-up"
+                >
                   <span className="text-sm text-black-secondary font-medium">
                     S H A R E S :
                   </span>
@@ -173,7 +191,7 @@ export default async function BlogPost({
                   </div>
                 </div>
                 {/* Comments Section */}
-                <div className="mt-12">
+                <div className="mt-12" data-aos="fade-up">
                   <h2 className="md:text-[32px] text-xl font-semibold mb-6">
                     2 Comments
                   </h2>
@@ -220,7 +238,7 @@ export default async function BlogPost({
                 </div>
 
                 {/* Comment Form */}
-                <form className="mt-12">
+                <form className="mt-12" data-aos="fade-up">
                   <h2 className="md:text-[32px] text-xl  font-semibold mb-6">
                     Leave a Comment
                   </h2>
@@ -325,7 +343,7 @@ export default async function BlogPost({
                 </div>
               </section>
               {/* Categories */}
-              <section >
+              <section>
                 <h2 className="font-semibold  text-black md:text-[28px] text-2xl mb-4  ">
                   Categories
                 </h2>

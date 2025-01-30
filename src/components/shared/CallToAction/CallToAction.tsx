@@ -8,7 +8,10 @@ import React from "react";
 const CallToAction = () => {
   return (
     <section className="container md:mt-[140px] sm:mt-[70px] mt-[50px]">
-      <div className="bg-customGradient relative text-white rounded-[32px] flex flex-col items-center justify-center p-8 md:p-24 ">
+      <div
+        className="bg-customGradient relative text-white rounded-[32px] flex flex-col items-center justify-center p-8 md:p-24 "
+        data-aos="zoom-in-up"
+      >
         {/* Background Icons */}
         <div className="absolute  md:top-1/2 top-14 lg:left-32 md:left-10 left-3 -translate-y-1/2">
           <Image src={ctaEqual} alt="CTA Icon" width={55} height={55} />

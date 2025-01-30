@@ -13,7 +13,7 @@ export default function Blogs() {
     <div className="container md:mt-20 mt-10">
       {/* Featured Post */}
       {featuredPost && (
-        <div className="mb-8 flex justify-center ">
+        <div className="mb-8 flex justify-center " data-aos="zoom-in-up">
           <article className="relative overflow-hidden rounded-2xl">
             {/* Image */}
             <Image
@@ -57,6 +57,7 @@ export default function Blogs() {
           <article
             key={post.id}
             className="bg-[#F8F8F8] rounded-[20px] shadow-sm p-6 sm:p-8 lg:p-10"
+            data-aos="fade-up"
           >
             {/* Author and Date */}
             <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm italic text-black-secondary mb-4">

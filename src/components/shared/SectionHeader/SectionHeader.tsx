@@ -34,6 +34,7 @@ const SectionHeader = ({
             align === "left",
           "text-center": align === "center",
         })}
+        data-aos="fade-up"
       >
         <span
           className={cn(
@@ -60,11 +61,15 @@ const SectionHeader = ({
             "md:text-left text-center": align === "left",
             "text-center": align === "center",
           })}
+          data-aos="fade-up"
         >
           {title}
         </h2>
         {button && (
-          <div className="mt-5 md:mt-10 flex items-center justify-center md:justify-start md:items-start">
+          <div
+            className="mt-5 md:mt-10 flex items-center justify-center md:justify-start md:items-start"
+            data-aos="fade-up"
+          >
             {button}
           </div>
         )}

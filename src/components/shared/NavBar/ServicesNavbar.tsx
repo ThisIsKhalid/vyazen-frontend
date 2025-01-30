@@ -71,15 +71,15 @@ const ServicesNavbar = () => {
   ];
 
   return (
-    <div className="max-w-5xl bg-[#F8F8F8] border border-white rounded-xl p-6 ">
-      <div className="grid grid-cols-1 sm:grid-cols-2">
+    <div className="w-[1040px] bg-[#F8F8F8] border border-white rounded-xl p-6 ">
+      <div className="grid grid-cols-2">
         {services.map((service, index) => (
           <Link
             key={index}
             href={service.link}
-            className="flex items-center gap-x-5 bg-transparent hover:bg-yellow-primary transition-all duration-300 ease-in-out p-4 rounded-xl"
+            className="flex items-center gap-x-5 hover:bg-yellow-primary transition-all duration-300 ease-in-out p-4 rounded-xl"
           >
-            <div className="w-[70px] rounded-xl">
+            <div className="flex-none w-[70px] rounded-xl">
               <Image
                 src={service.icon}
                 alt={service.title}
@@ -88,16 +88,26 @@ const ServicesNavbar = () => {
                 className="h-full w-full "
               />
             </div>
-            <div>
+            <div className="flex-1">
               <h3 className="text-2xl font-semibold tracking-[-0.02em] mb-3 text-black flex items-center gap-x-2">
                 {service.title} <IoMdArrowForward />
               </h3>
-              <p className="font-satoshi text-base text-black/50">
+              <p className="font-satoshi text-base text-black/50 text-wrap">
                 {service.description}
               </p>
             </div>
           </Link>
         ))}
+      </div>
+
+      {/* view more button */}
+      <div className="flex items-center justify-center mt-6">
+        <Link
+          href="/our-services"
+          className="border border-yellow-primary text-black font-semibold text-lg px-5 py-2 rounded-xl hover:bg-yellow-primary transition-all duration-300 ease-in-out"
+        >
+          View More
+        </Link>
       </div>
     </div>
   );

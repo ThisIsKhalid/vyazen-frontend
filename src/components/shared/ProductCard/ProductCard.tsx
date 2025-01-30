@@ -6,7 +6,10 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 
 const ProductCard = () => {
   return (
-    <div className=" bg-white rounded-[20px] shadow-lg overflow-hidden">
+    <div
+      className=" bg-white rounded-[20px] shadow-lg overflow-hidden"
+      data-aos="fade-up"
+    >
       {/* Image Section */}
       <div className="h-[300px] md:h-[444px] relative">
         <Image

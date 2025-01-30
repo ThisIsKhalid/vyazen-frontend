@@ -42,7 +42,10 @@ const OurProducts = () => {
         </div>
 
         {/* Product Cards Section */}
-        <div className="md:flex-1 grid grid-cols-1 xl:grid-cols-2 gap-6">
+        <div
+          className="md:flex-1 grid grid-cols-1 xl:grid-cols-2 gap-6"
+          data-aos="fade-up"
+        >
           <ProductCard />
           <ProductCard />
         </div>

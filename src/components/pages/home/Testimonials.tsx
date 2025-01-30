@@ -35,7 +35,7 @@ const Testimonials = () => {
             clickable: true,
           }}
           autoplay={{
-            delay: 2500,
+            delay: 3500,
             disableOnInteraction: false,
           }}
           loop={true}
