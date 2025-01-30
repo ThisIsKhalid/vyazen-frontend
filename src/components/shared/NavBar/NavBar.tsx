@@ -78,14 +78,16 @@ const NavBar = () => {
               </p>
 
               {/* ProductsNavbar */}
-              {showProducts && (
-                <div
-                  className="absolute w-[500px] z-50 top-20 left-1/2 -translate-x-1/2"
-                  onClick={() => setShowProducts(false)}
-                >
-                  <ProductsNavbar />
-                </div>
-              )}
+
+              <div
+                className={`absolute w-[500px] z-50 top-20 left-1/2 -translate-x-1/2 transition-all duration-300 ease-in-out ${
+                  showProducts
+                    ? "opacity-100 scale-100 translate-y-0"
+                    : "opacity-0 scale-95 translate-y-5 pointer-events-none"
+                }`}
+              >
+                <ProductsNavbar />
+              </div>
             </li>
             <li
               className="relative group py-8"
@@ -98,7 +100,7 @@ const NavBar = () => {
             >
               <p
                 className={cn(
-                  "text-base leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out  flex items-center cursor-pointer",
+                  "text-base leading-6 text-left hover:text-yellow-primary hover:underline underline-offset-2 decoration-yellow-primary transition-all duration-300 ease-in-out flex items-center cursor-pointer",
                   {
                     "text-yellow-primary": showServices,
                   }
@@ -107,16 +109,18 @@ const NavBar = () => {
                 Services <FaPlus className="ml-1 text-xs" />
               </p>
 
-              {/* SErvicesNavbar */}
-              {showServices && (
-                <div
-                  className="absolute w-[1040px] z-50 top-20 left-1/2 -translate-x-1/2"
-                  onClick={() => setShowServices(false)}
-                >
-                  <ServicesNavbar />
-                </div>
-              )}
+              {/* ServicesNavbar with Smooth Animation */}
+              <div
+                className={`absolute w-[1040px] z-50 top-20 left-1/2 -translate-x-1/2 transition-all duration-300 ease-in-out ${
+                  showServices
+                    ? "opacity-100 scale-100 translate-y-0"
+                    : "opacity-0 scale-95 translate-y-5 pointer-events-none"
+                }`}
+              >
+                <ServicesNavbar />
+              </div>
             </li>
+
             <li>
               <Link
                 href="/contact-us"

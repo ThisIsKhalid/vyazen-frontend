@@ -34,7 +34,7 @@ const SectionHeader = ({
             align === "left",
           "text-center": align === "center",
         })}
-        data-aos="zoom-in"
+        data-aos="fade-up"
       >
         <span
           className={cn(
