@@ -14,6 +14,7 @@ const NavBar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [showServices, setShowServices] = useState(false);
   const [showProducts, setShowProducts] = useState(false);
+  console.log(showProducts);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -23,7 +24,7 @@ const NavBar = () => {
     <section className="relative">
       {/* Navbar */}
       <nav className="bg-customGradient text-white border-b border-white/10">
-        <section className="container py-6 flex justify-between items-center ">
+        <section className="container  flex justify-between items-center ">
           <Link
             href="/"
             className="flex items-center"
@@ -57,11 +58,12 @@ const NavBar = () => {
               </Link>
             </li>
             <li
-              className="relative group"
+              className="relative group py-8"
               onMouseEnter={() => {
                 setShowProducts(true);
                 setShowServices(false);
               }}
+              onMouseLeave={() => setShowProducts(false)}
               onClick={() => setShowProducts(!showProducts)}
             >
               <p
@@ -74,6 +76,17 @@ const NavBar = () => {
               >
                 Products <FaPlus className="ml-1 text-xs" />
               </p>
+
+              {/* ProductsNavbar */}
+              {showProducts && (
+                <div
+                  className="absolute container w-[500px] flex items-center justify-center z-50 top-20 left-1/2 -translate-x-1/2"
+                  onClick={() => setShowProducts(false)}
+                  // onMouseLeave={() => setShowProducts(false)}
+                >
+                  <ProductsNavbar />
+                </div>
+              )}
             </li>
             <li
               className="relative group"
@@ -123,16 +136,6 @@ const NavBar = () => {
           onClick={() => setShowServices(false)}
         >
           <ServicesNavbar />
-        </div>
-      )}
-
-      {/* ProductsNavbar */}
-      {showProducts && (
-        <div
-          className="absolute container w-full flex items-center justify-center z-50 top-20 left-1/2 -translate-x-1/2"
-          onClick={() => setShowProducts(false)}
-        >
-          <ProductsNavbar />
         </div>
       )}
 

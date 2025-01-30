@@ -39,7 +39,7 @@ const ProductsNavbar = () => {
   ];
 
   return (
-    <div className="max-w-md bg-[#F8F8F8] border border-white rounded-xl p-6 ">
+    <div className="max-w-[800px] bg-[#F8F8F8] border border-white rounded-xl p-6 ">
       <div className="grid grid-cols-1">
         {products.map((product, index) => (
           <Link
