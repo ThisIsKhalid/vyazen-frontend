@@ -28,6 +28,7 @@ const TeamGrid = () => {
         <div
           key={index}
           className="group relative overflow-hidden rounded-2xl transition-all border-t-4 shadow-md shadow-slate-800 border-olive-secondary duration-300 hover:scale-105"
+          data-aos="zoom-in-up"
         >
           {/* Card Content */}
           <div className="relative aspect-[3/4] bg-black/30 backdrop-blur-sm transition-colors duration-300">
