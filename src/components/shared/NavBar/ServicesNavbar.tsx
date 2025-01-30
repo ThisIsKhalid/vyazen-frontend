@@ -24,49 +24,49 @@ const ServicesNavbar = () => {
       description:
         "We craft innovative mobile applications that prioritize functionality, design.",
       icon: branding,
-      link: "/services/branding-identity",
+      link: "/our-services/branding-identity",
     },
     {
       title: "Digital Marketing",
       description:
         "Empowering businesses reach their target audience with strategy.",
       icon: digital,
-      link: "/services/digital-marketing",
+      link: "/our-services/digital-marketing",
     },
     {
       title: "Product Design",
       description:
         "Empowering businesses reach their target audience with strategy.",
       icon: design,
-      link: "/services/product-design",
+      link: "/our-services/product-design",
     },
     {
       title: "Web Development",
       description:
         "Our team creates visually responsive and high-performance websites.",
       icon: web,
-      link: "/services/web-development",
+      link: "/our-services/web-development",
     },
     {
       title: "App Development",
       description:
         "We craft innovative mobile applications that prioritize functionality, design.",
       icon: app,
-      link: "/services/app-development",
+      link: "/our-services/app-development",
     },
     {
       title: "Motion Graphics & Production",
       description:
         "We bring your stories to life through dynamic motion graphics.",
       icon: motion,
-      link: "/services/motion-graphics-production",
+      link: "/our-services/motion-graphics-production",
     },
     {
       title: "Graphics Design",
       description:
         "Graphic design: the art of communicating ideas visually, blending creativity.",
       icon: graphics,
-      link: "/services/graphics-design",
+      link: "/our-services/graphics-design",
     },
   ];
 

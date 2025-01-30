@@ -13,28 +13,28 @@ const ProductsNavbar = () => {
       description:
         "Empowering businesses reach their target audience with strategy.",
       icon: agency,
-      link: "/products/agency-websites",
+      link: "/our-products/agency-websites",
     },
     {
       title: "Business Websites",
       description:
         "Our UI/UX design services ensure your digital products offer seamless user.",
       icon: business,
-      link: "/products/business-websites",
+      link: "/our-products/business-websites",
     },
     {
       title: "Technology Websites",
       description:
         "We craft innovative mobile applications that prioritize functionality, design.",
       icon: technology,
-      link: "/products/technology-websites",
+      link: "/our-products/technology-websites",
     },
     {
       title: "Finance Websites",
       description:
         "Empowering businesses reach their target audience with strategy.",
       icon: finance,
-      link: "/products/finance-websites",
+      link: "/our-products/finance-websites",
     },
   ];
 
