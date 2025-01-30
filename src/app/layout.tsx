@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
-import { Sora } from "next/font/google";
-import "./globals.css";
+import AOSInitializer from "@/components/AOSInitializer";
+import MyContextProvider from "@/lib/MyContextProvider";
 import SessionProviderForNextAuth from "@/nextAuth/SessionProviderForNextAuth";
 import ReduxStoreProvider from "@/redux/ReduxStoreProvider";
+import type { Metadata } from "next";
+import { Sora } from "next/font/google";
 import { Toaster } from "sonner";
-import MyContextProvider from "@/lib/MyContextProvider";
+import "./globals.css";
 
 const sora = Sora({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
           <SessionProviderForNextAuth>
             <ReduxStoreProvider>
               <Toaster />
+              <AOSInitializer />
               {children}
             </ReduxStoreProvider>
           </SessionProviderForNextAuth>
