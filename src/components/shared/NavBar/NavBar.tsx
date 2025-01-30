@@ -80,20 +80,20 @@ const NavBar = () => {
               {/* ProductsNavbar */}
               {showProducts && (
                 <div
-                  className="absolute container w-[500px] flex items-center justify-center z-50 top-20 left-1/2 -translate-x-1/2"
+                  className="absolute w-[500px] z-50 top-20 left-1/2 -translate-x-1/2"
                   onClick={() => setShowProducts(false)}
-                  // onMouseLeave={() => setShowProducts(false)}
                 >
                   <ProductsNavbar />
                 </div>
               )}
             </li>
             <li
-              className="relative group"
+              className="relative group py-8"
               onMouseEnter={() => {
                 setShowServices(true);
                 setShowProducts(false);
               }}
+              onMouseLeave={() => setShowServices(false)}
               onClick={() => setShowServices(!showServices)}
             >
               <p
@@ -106,6 +106,16 @@ const NavBar = () => {
               >
                 Services <FaPlus className="ml-1 text-xs" />
               </p>
+
+              {/* SErvicesNavbar */}
+              {showServices && (
+                <div
+                  className="absolute w-[1040px] z-50 top-20 left-1/2 -translate-x-1/2"
+                  onClick={() => setShowServices(false)}
+                >
+                  <ServicesNavbar />
+                </div>
+              )}
             </li>
             <li>
               <Link
@@ -128,16 +138,6 @@ const NavBar = () => {
           </button>
         </section>
       </nav>
-
-      {/* SErvicesNavbar */}
-      {showServices && (
-        <div
-          className="absolute w-full container flex items-center justify-center z-50 top-20 left-1/2 -translate-x-1/2"
-          onClick={() => setShowServices(false)}
-        >
-          <ServicesNavbar />
-        </div>
-      )}
 
       {/* Sidebar for Mobile */}
       <div

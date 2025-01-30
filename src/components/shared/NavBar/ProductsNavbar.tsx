@@ -39,34 +39,32 @@ const ProductsNavbar = () => {
   ];
 
   return (
-    <div className="max-w-[800px] bg-[#F8F8F8] border border-white rounded-xl p-6 ">
-      <div className="grid grid-cols-1">
-        {products.map((product, index) => (
-          <Link
-            key={index}
-            href={product.link}
-            className="flex items-center gap-x-5 bg-transparent hover:bg-yellow-primary transition-all duration-300 ease-in-out p-4 rounded-xl"
-          >
-            <div className="w-[70px] rounded-xl">
-              <Image
-                src={product.icon}
-                alt={product.title}
-                width={1000}
-                height={1000}
-                className="h-full w-full "
-              />
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold tracking-[-0.02em] mb-3 text-black flex items-center gap-x-2">
-                {product.title} <IoMdArrowForward />
-              </h3>
-              <p className="font-satoshi text-base text-black/50">
-                {product.description}
-              </p>
-            </div>
-          </Link>
-        ))}
-      </div>
+    <div className="w-[500px] bg-[#F8F8F8] border border-white rounded-xl p-6 ">
+      {products.map((product, index) => (
+        <Link
+          key={index}
+          href={product.link}
+          className="flex items-center gap-x-5 hover:bg-yellow-primary transition-all duration-300 ease-in-out p-4 rounded-xl w-full"
+        >
+          <div className="flex-none w-[70px] rounded-xl">
+            <Image
+              src={product.icon}
+              alt={product.title}
+              width={1000}
+              height={1000}
+              className="h-full w-full "
+            />
+          </div>
+          <div className="flex-1">
+            <h3 className="text-2xl font-semibold tracking-[-0.02em] mb-3 text-black flex items-center gap-x-2">
+              {product.title} <IoMdArrowForward />
+            </h3>
+            <p className="font-satoshi text-base text-black/50 text-wrap">
+              {product.description}
+            </p>
+          </div>
+        </Link>
+      ))}
 
       {/* view more button */}
       <div className="flex items-center justify-center mt-6">
