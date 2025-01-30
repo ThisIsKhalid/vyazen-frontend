@@ -8,7 +8,6 @@ import InfoCard from "./InfoCard";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import { Autoplay } from "swiper/modules";
 
 const OurProcess = () => {
   return (
@@ -55,11 +54,7 @@ const OurProcess = () => {
                 spaceBetween: 30,
               },
             }}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            modules={[Autoplay]}
+            modules={[]}
           >
             <SwiperSlide>
               <InfoCard />

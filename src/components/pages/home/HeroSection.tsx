@@ -13,7 +13,7 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative container xl:py-[140px] py-[70px] flex xl:flex-row flex-col gap-x-5 gap-y-10">
         {/* Left Content */}
-        <div className="text-center xl:text-left">
+        <div className="text-center xl:text-left" data-aos="fade-right">
           <div className="text-center xl:text-left">
             <span className="py-1.5 px-8 rounded-full font-satoshi font-bold text-base tracking-[8px] uppercase shadow-[1px_3px_1px_0px_rgba(255,255,255,0.2)] text-nowrap bg-[#FFFFFF0F] text-white">
               Digital Agency
@@ -44,7 +44,10 @@ export default function HeroSection() {
         </div>
 
         {/* Right Image */}
-        <div className="relative flex items-center justify-center">
+        <div
+          className="relative flex items-center justify-center"
+          data-aos="fade-left"
+        >
           {/* Yellow Background */}
           <div className="absolute inset-0 bg-gradient-to-br from-yellow-primary to-transparent rounded-2xl blur-[80px]"></div>
 

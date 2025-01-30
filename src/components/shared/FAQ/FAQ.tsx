@@ -101,6 +101,7 @@ const FAQ = () => {
                 "bg-yellow-primary": expanded === faq.id,
               }
             )}
+            data-aos="fade-up"
           >
             <div
               className="flex justify-between items-center cursor-pointer gap-1 md:gap-2"

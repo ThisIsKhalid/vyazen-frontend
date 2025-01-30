@@ -28,7 +28,10 @@ const AboutUs = () => {
       </div>
 
       {/* Statistics Section */}
-      <div className="container mt-14  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-6 border-blue-500">
+      <div
+        className="container mt-14  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-6 border-blue-500"
+        data-aos="fade-up"
+      >
         <div className="  p-6 md:p-12">
           <h3 className="font-bold text-center md:text-left tracking-[-0.02em]  text-[64px] leading-[64px]">
             98%
