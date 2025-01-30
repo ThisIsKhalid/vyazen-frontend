@@ -11,16 +11,19 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative container xl:py-[140px] py-[70px] flex xl:flex-row flex-col gap-x-5 gap-y-10">
+      <div className="relative container xl:py-[140px] py-[70px] flex xl:flex-row flex-col gap-x-16 gap-y-10">
         {/* Left Content */}
-        <div className="text-center xl:text-left" data-aos="fade-right">
+        <div
+          className="text-center xl:text-left"
+          data-aos="fade-right"
+        >
           <div className="text-center xl:text-left">
             <span className="py-1.5 px-8 rounded-full font-satoshi font-bold text-base tracking-[8px] uppercase shadow-[1px_3px_1px_0px_rgba(255,255,255,0.2)] text-nowrap bg-[#FFFFFF0F] text-white">
               Digital Agency
             </span>
           </div>
           {/* Main Heading */}
-          <h2 className="font-light text-5xl tracking-[-0.02em] uppercase md:text-[92px] md:leading-[103px] text-white md:my-[52px] my-10">
+          <h2 className="font-light text-5xl tracking-[-0.02em] uppercase md:text-[88px] md:leading-[103px] text-white md:my-[52px] my-10">
             <span className="font-bold">our </span>Creative digital
             <span className="font-bold"> agency.</span>
           </h2>
