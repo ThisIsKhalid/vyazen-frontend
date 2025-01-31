@@ -24,7 +24,7 @@ const NavBar = () => {
     <section className="relative">
       {/* Navbar */}
       <nav className="bg-customGradient text-white border-b border-white/10">
-        <section className="container  flex justify-between items-center ">
+        <section className="container  flex justify-between items-center py-6 lg:py-0">
           <Link
             href="/"
             className="flex items-center"
