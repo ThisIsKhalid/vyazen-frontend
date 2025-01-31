@@ -71,8 +71,8 @@ const ServicesNavbar = () => {
   ];
 
   return (
-    <div className="w-[1040px] bg-[#F8F8F8] border border-white rounded-xl p-6 ">
-      <div className="grid grid-cols-2">
+    <div className="xl:w-[1040px] md:w-[520px] bg-[#F8F8F8] border border-white rounded-xl p-6 ">
+      <div className="grid grid-cols-1 xl:grid-cols-2">
         {services.map((service, index) => (
           <Link
             key={index}

@@ -40,7 +40,7 @@ const NavBar = () => {
           </Link>
 
           {/* Desktop Links */}
-          <ul className="hidden md:flex font-satoshi font-medium lg:gap-x-10 md:gap-x-3 items-center text-nowrap">
+          <ul className="hidden lg:flex font-satoshi font-medium lg:gap-x-10 md:gap-x-3 items-center text-nowrap">
             <li>
               <Link
                 href="/"
@@ -80,7 +80,7 @@ const NavBar = () => {
               {/* ProductsNavbar */}
 
               <div
-                className={`absolute w-[500px] z-50 top-20 left-1/2 -translate-x-1/2 transition-all duration-300 ease-in-out ${
+                className={`absolute xl:w-[500px] md:w-[450px] hidden md:block z-50 top-20 left-1/2 -translate-x-1/2 transition-all duration-300 ease-in-out ${
                   showProducts
                     ? "opacity-100 scale-100 translate-y-0"
                     : "opacity-0 scale-95 translate-y-5 pointer-events-none"
@@ -111,7 +111,7 @@ const NavBar = () => {
 
               {/* ServicesNavbar with Smooth Animation */}
               <div
-                className={`absolute w-[1040px] z-50 top-20 left-1/2 -translate-x-1/2 transition-all duration-300 ease-in-out ${
+                className={`absolute xl:w-[1040px] lg:w-[900px] md:w-[520px] hidden md:block z-50 top-20 left-1/2 -translate-x-1/2 transition-all duration-300 ease-in-out ${
                   showServices
                     ? "opacity-100 scale-100 translate-y-0"
                     : "opacity-0 scale-95 translate-y-5 pointer-events-none"
@@ -131,13 +131,13 @@ const NavBar = () => {
             </li>
           </ul>
 
-          <button className="hidden md:flex  py-3 px-12 border border-yellow-primary rounded-full text-yellow-primary hover:bg-yellow-primary hover:text-black opacity-100 transition duration-300 text-nowrap">
+          <button className="hidden lg:flex  py-3 px-12 border border-yellow-primary rounded-full text-yellow-primary hover:bg-yellow-primary hover:text-black opacity-100 transition duration-300 text-nowrap">
             Let&apos;s Talk
           </button>
 
           {/* Mobile Menu Icon */}
 
-          <button className="md:hidden" onClick={toggleSidebar}>
+          <button className="lg:hidden" onClick={toggleSidebar}>
             <FiMenu size={24} />
           </button>
         </section>
