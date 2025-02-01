@@ -31,12 +31,11 @@ export default function HeroSection() {
   }, []);
 
   useEffect(() => {
-    // Function to check if the screen is LG or bigger
     const checkScreenSize = () => {
       const isLgScreen = window.innerWidth >= 1024;
       setIsLgOrBigger(isLgScreen);
 
-      // Reset styles when screen is resized to less than lg
+      // Reset styles when resized below lg
       if (!isLgScreen && smallVideoRef.current) {
         gsap.set(smallVideoRef.current, { clearProps: "all" });
       }
@@ -63,7 +62,7 @@ export default function HeroSection() {
     const smallVideo = smallVideoRef.current;
     const largeVideo = largeVideoRef.current;
 
-    gsap.set(smallVideo, { transformOrigin: "top left" });
+    gsap.set(smallVideo, { transformOrigin: "center center" });
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -78,17 +77,29 @@ export default function HeroSection() {
       scale: () => {
         const smallRect = smallVideo.getBoundingClientRect();
         const largeRect = largeVideo.getBoundingClientRect();
-        return largeRect.width / smallRect.width;
+        return (largeRect.width / smallRect.width) * 1.5;
       },
       x: () => {
         const smallRect = smallVideo.getBoundingClientRect();
         const largeRect = largeVideo.getBoundingClientRect();
-        return largeRect.left - smallRect.left;
+        // return largeRect.left - smallRect.left;
+        return (
+          largeRect.left +
+          largeRect.width / 2 -
+          smallRect.left -
+          smallRect.width / 2
+        );
       },
       y: () => {
         const smallRect = smallVideo.getBoundingClientRect();
         const largeRect = largeVideo.getBoundingClientRect();
-        return largeRect.top - smallRect.top;
+        // return largeRect.top - smallRect.top;
+        return (
+          largeRect.top +
+          largeRect.height / 2 -
+          smallRect.top -
+          smallRect.height / 2
+        );
       },
       ease: "power2.out",
     });
@@ -160,7 +171,7 @@ export default function HeroSection() {
 
       <div
         ref={containerRef}
-        className="container md:mt-[140px] sm:mt-[70px] mt-[50px] border border-red-500 flex items-center justify-center w-full"
+        className="container md:mt-[140px] sm:mt-[70px] mt-[50px] flex items-center justify-center w-full min-h-[500px]"
       >
         <div
           ref={largeVideoRef}
