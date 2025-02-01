@@ -66,14 +66,16 @@ export default function HeroSection() {
         </div>
       </div>
       <div className="container md:mt-[140px] sm:mt-[70px] mt-[50px] ">
-        <div className="w-[1296px] h-[673px] mx-auto rounded-[24px] overflow-hidden">
-          <iframe
-            className="w-full h-full"
-            src="https://www.youtube.com/embed/qWNfz8yC_eM?si=OFHkx5a3U_eIGIBP"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+        <div className="w-full max-w-[1296px] mx-auto p-4">
+          <div className="relative w-full aspect-video rounded-[24px] overflow-hidden">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/qWNfz8yC_eM?si=OFHkx5a3U_eIGIBP"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>
