@@ -1,4 +1,3 @@
-import AgencyBanner from "@/components/pages/home/AgencyBannerSection";
 import HeroSection from "@/components/pages/home/HeroSection";
 import OurProcess from "@/components/pages/home/OurProcess";
 import OurProducts from "@/components/pages/home/OurProducts";
@@ -13,7 +12,6 @@ const HomePage = () => {
   return (
     <div>
       <HeroSection />
-      {/* <AgencyBanner/> */}
       <AboutUs />
       <OurServices />
       <OurProducts />
